@@ -182,3 +182,29 @@ footer a:hover { color: var(--fg); }
 h2.bigname{font-size:clamp(4.2rem,19vw,17rem);max-width:none}
 .parts.three{grid-template-columns:repeat(3,1fr)}
 @media (max-width:700px){.parts.three{grid-template-columns:1fr}}
+
+/* Dot cursor on devices with a mouse; touch screens keep normal behaviour */
+.dot{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:100;opacity:0;transition:width .2s,height .2s,margin .2s,opacity .2s}
+.dot.on{opacity:1}
+.dot.big{width:40px;height:40px;margin:-20px 0 0 -20px}
+@media (hover:hover) and (pointer:fine){html.has-dot,html.has-dot *{cursor:none!important}}
+@media (hover:none),(pointer:coarse){.dot{display:none}}
+
+/* Phones: one compact menu row, more room above the first line */
+@media (max-width:700px){
+  .site-header{gap:6px;padding:12px var(--gutter) 10px}
+  .nav{flex-wrap:nowrap;overflow-x:auto;gap:12px;width:100%;scrollbar-width:none;-webkit-overflow-scrolling:touch;justify-content:space-between}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:10.5px;letter-spacing:.07em;white-space:nowrap}
+  .panel{padding-top:130px;padding-bottom:100px}
+  h1{font-size:clamp(2.6rem,13vw,4rem)}
+  .bigname{font-size:clamp(3.6rem,24vw,8rem)}
+}
+
+/* Less empty black: pages with short text size their panels to the content */
+body.compact .panel{min-height:0;padding-block:clamp(72px,10vw,112px)}
+body.compact main > .panel:first-child{padding-top:clamp(120px,16vw,170px)}
+@media (max-width:700px){
+  .panel{min-height:0;padding-bottom:72px}
+  main > .panel:first-child{min-height:60svh}
+}
