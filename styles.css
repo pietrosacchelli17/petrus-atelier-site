@@ -7,8 +7,8 @@
   --line: #D8D5CE;
   --stone: #C4AD8E;
   --keystone: #7D8C74;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
+  --serif: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --sans: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
   --gutter: clamp(20px, 4vw, 48px);
 }
 
@@ -71,11 +71,11 @@ main { padding-top: 70px; }
   color: var(--stone);
   margin-bottom: 18px;
 }
-h1, h2, h3 { font-family: var(--serif); font-weight: 300; line-height: 1.05; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 200; line-height: 1.05; }
 h1 { font-size: clamp(44px, 7.5vw, 104px); letter-spacing: -0.01em; }
 h2 { font-size: clamp(32px, 4.5vw, 56px); margin-bottom: 28px; }
 h3 { font-size: 26px; font-weight: 400; margin-bottom: 10px; }
-em { font-style: italic; color: var(--stone); }
+em { font-style: normal; color: var(--stone); }
 p + p { margin-top: 1.1em; }
 .lede { font-size: clamp(17px, 2vw, 21px); color: #444; max-width: 640px; }
 
