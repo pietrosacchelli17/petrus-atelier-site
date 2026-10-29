@@ -119,7 +119,8 @@ footer a:hover { color: var(--fg); }
 @media (max-width: 900px) {
   .panel { flex-direction: column; align-items: flex-start; justify-content: center; }
   .shot { align-self: stretch; }
-  .shot img { max-height: 40svh; }
+  .shot img { max-height: 32svh; }
+  .panel { padding-bottom: 130px; }
 }
 @media (max-width: 700px) {
   .site-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px var(--gutter); }
