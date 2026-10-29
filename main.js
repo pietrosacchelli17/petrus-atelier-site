@@ -44,7 +44,7 @@ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   addEventListener('mousemove', e => {
     x = e.clientX; y = e.clientY; dot.classList.add('on');
     if (!raf) raf = requestAnimationFrame(draw);
-    dot.classList.toggle('big', !!e.target.closest('a, button, summary'));
+    dot.classList.toggle('big', !!e.target.closest('a, button, summary, input, textarea, select, label'));
   }, { passive: true });
   document.addEventListener('mouseleave', () => dot.classList.remove('on'));
 }

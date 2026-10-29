@@ -186,7 +186,7 @@ h2.bigname{font-size:clamp(4.2rem,19vw,17rem);max-width:none}
 /* Dot cursor on devices with a mouse; touch screens keep normal behaviour */
 .dot{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:100;opacity:0;transition:width .2s,height .2s,margin .2s,opacity .2s}
 .dot.on{opacity:1}
-.dot.big{width:40px;height:40px;margin:-20px 0 0 -20px}
+.dot.big{width:22px;height:22px;margin:-11px 0 0 -11px}
 @media (hover:hover) and (pointer:fine){html.has-dot,html.has-dot *{cursor:none!important}}
 @media (hover:none),(pointer:coarse){.dot{display:none}}
 
