@@ -9,7 +9,7 @@
   --gutter: clamp(20px, 4vw, 48px);
 }
 
-html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
+html { scroll-behavior: smooth; scroll-snap-type: y proximity; scroll-padding-top: 72px; }
 body {
   background: var(--bg);
   color: var(--fg);
@@ -37,7 +37,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 24px;
   padding: 20px var(--gutter);
-  mix-blend-mode: difference;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
 .logo { text-decoration: none; font-weight: 400; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
 .nav { display: flex; gap: clamp(14px, 2.4vw, 32px); list-style: none; flex-wrap: wrap; justify-content: flex-end; }
@@ -98,7 +99,8 @@ h2 { font-size: clamp(2.4rem, 6.4vw, 5.6rem); max-width: 16ch; }
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  mix-blend-mode: difference;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
   pointer-events: none;
 }
 .caption span:nth-child(2) { font-variant-numeric: tabular-nums; }
@@ -123,6 +125,7 @@ footer a:hover { color: var(--fg); }
   .panel { padding-bottom: 130px; }
 }
 @media (max-width: 700px) {
+  html { scroll-padding-top: 110px; }
   .site-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px var(--gutter); }
   .nav { justify-content: flex-start; gap: 14px; }
   .panel { padding-top: 130px; }
@@ -130,3 +133,8 @@ footer a:hover { color: var(--fg); }
   .caption { grid-template-columns: 1fr auto; }
   .btn + .btn { margin-left: 0; margin-top: 16px; }
 }
+
+/* Keystone panel: the logo, centred, instead of a screenshot */
+.shot.mark { display: flex; align-items: center; justify-content: center; }
+.shot.mark img { width: auto; max-width: 100%; height: min(26svh, 230px); object-fit: contain; object-position: center; }
+@media (max-width: 900px) { .shot.mark img { height: 16svh; } .shot.mark { justify-content: flex-start; } }
