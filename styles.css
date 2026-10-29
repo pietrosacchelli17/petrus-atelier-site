@@ -208,3 +208,6 @@ body.compact main > .panel:first-child{padding-top:clamp(120px,16vw,170px)}
   .panel{min-height:0;padding-bottom:72px}
   main > .panel:first-child{min-height:60svh}
 }
+
+.pillars.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.pillars.three{grid-template-columns:1fr}.pillars.three > div{border-right:0;border-bottom:1px solid var(--line)}.pillars.three > div:last-child{border-bottom:0}}
