@@ -1,10 +1,9 @@
 // Petrus Atelier is the main site. Keystone, PS Gallery and [AT]last are separate websites.
-// Set each address here once it is deployed. The localhost values are for local development:
-//   keystone-site: python3 -m http.server 8766   atlast: PORT=3000 npm run dev   psgallery: PORT=3001 npm run dev
+// Change an address here if a site moves, for example to a custom domain.
 const SITES = {
-  keystone:  { label: 'Keystone',   url: 'http://localhost:8766' },
-  psgallery: { label: 'PS Gallery', url: 'http://localhost:3001' },
-  atlast:    { label: 'ATLAST',     url: 'http://localhost:3000' },
+  keystone:  { label: 'Keystone',   url: 'https://keystone-website-two.vercel.app' },
+  psgallery: { label: 'PS Gallery', url: 'https://psgallery-gamma.vercel.app' },
+  atlast:    { label: 'ATLAST',     url: 'https://atlast-nu.vercel.app' },
 };
 const INSTAGRAM = 'https://www.instagram.com/psgallery.jpg';
 
