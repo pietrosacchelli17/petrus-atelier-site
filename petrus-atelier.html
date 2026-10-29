@@ -3,41 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Petrus Atelier — Architecture and design studio</title>
+<title>The studio — Petrus Atelier</title>
 <meta name="description" content="Petrus Atelier is an architecture and design studio concerned with material honesty, detailing and craft.">
 <link rel="icon" href="images/keystone-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
+<a class="skip" href="#main">Skip to content</a>
 
-  <section class="page-head">
-    <p class="eyebrow fi">Architecture and design studio</p>
-    <h1 class="fi">A place of making, research and <em>design.</em></h1>
-    <p class="lede fi" style="margin-top:32px">Petrus Atelier is interested in how design, specification and construction come together to create spaces that last.</p>
-  </section>
+<header class="site-header">
+  <a class="logo" href="index.html">Petrus Atelier</a>
+  <nav aria-label="Primary"><ul class="nav">
+    <li><a href="petrus-atelier.html" aria-current="page">Studio</a></li>
+    <li><a href="#" data-site="keystone">Keystone</a></li>
+    <li><a href="#" data-site="psgallery">PS Gallery</a></li>
+    <li><a href="#" data-site="atlast">ATLAST</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul></nav>
+</header>
 
-  <section class="section">
-    <div class="two-col">
-      <div class="fi">
-        <p class="eyebrow">The name</p>
-        <h2>Petrus. <em>Atelier.</em></h2>
-      </div>
-      <div class="fi">
-        <p class="lede">Petrus is the Latin origin of Pietro, meaning rock or stone. The name reflects a connection to architecture, materiality, craftsmanship and construction.</p>
-        <p>Atelier suggests a place of making, research and experimentation rather than a conventional architectural office. PSA, the abbreviation, stands for Pietro Sacchelli and Atelier, and the PS monogram also reads as the first and last letters of Petrus.</p>
-      </div>
+<main id="main">
+
+  <section class="panel" data-caption="Studio">
+    <div class="inner">
+      <p class="eyebrow fi">Architecture and design studio</p>
+      <h1 class="fi">A place of making, research and design.</h1>
+      <p class="text fi">Petrus Atelier is interested in how design, specification and construction come together to create spaces that last.</p>
     </div>
   </section>
 
-  <section class="section dark">
-    <div class="two-col">
-      <div class="fi">
-        <p class="eyebrow">Practice</p>
-        <h2>From idea to <em>built result.</em></h2>
-      </div>
+  <section class="panel" data-caption="The name">
+    <div class="inner">
+      <p class="eyebrow fi">The name</p>
+      <h2 class="fi">Petrus. Atelier.</h2>
+      <p class="text fi">Petrus is the Latin origin of Pietro, meaning rock or stone. The name reflects a connection to architecture, materiality, craftsmanship and construction.</p>
+      <p class="text fi">Atelier suggests a place of making, research and experimentation rather than a conventional architectural office. PSA stands for Pietro Sacchelli and Atelier, and the PS monogram also reads as the first and last letters of Petrus.</p>
+    </div>
+  </section>
+
+  <section class="panel" data-caption="Practice">
+    <div class="inner">
+      <p class="eyebrow fi">Practice</p>
+      <h2 class="fi">From idea to built result.</h2>
       <ul class="list fi">
         <li><strong>Architecture and design</strong><span>Residential, commercial and hospitality projects, from concept through construction administration.</span></li>
         <li><strong>Materials consultancy</strong><span>Stone and ceramics guidance: estimation, specification, sourcing and procurement.</span></li>
@@ -47,16 +57,33 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="narrow fi">
-      <p class="eyebrow">Projects</p>
-      <h2>Selected work <em>coming soon.</em></h2>
-      <p>Projects will be added here. In the meantime, see how the studio looks at buildings in <a href="#" data-site="psgallery">PS Gallery</a>.</p>
-      <a class="btn" href="index.html#contact">Start a conversation</a>
+  <section class="panel" data-caption="Projects">
+    <div class="inner">
+      <p class="eyebrow fi">Projects</p>
+      <h2 class="fi">Selected work coming soon.</h2>
+      <p class="text fi">Projects will be added here. In the meantime, see how the studio looks at buildings in <a href="#" data-site="psgallery">PS Gallery</a>.</p>
+      <a class="btn fi" href="mailto:pietrosacchelli17@gmail.com?subject=Enquiry">Start a conversation</a>
     </div>
   </section>
 
 </main>
-<script src="main.js"></script>
+
+<footer>
+  <div>© <span id="yr"></span> Pietro Sacchelli · London</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="#" data-site="keystone">Keystone</a>
+    <a href="#" data-site="psgallery">PS Gallery</a>
+    <a href="#" data-site="atlast">ATLAST</a>
+  </div>
+</footer>
+
+<div class="caption" aria-hidden="true">
+  <span id="cap">Studio</span>
+  <span id="count">(1/4)</span>
+  <span>Scroll</span>
+</div>
+
+<script src="main.js" defer></script>
 </body>
 </html>
