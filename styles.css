@@ -160,29 +160,13 @@ footer a:hover { color: var(--fg); }
 .shot.mark img { width: auto; max-width: 100%; height: min(26svh, 230px); object-fit: contain; object-position: center; }
 @media (max-width: 900px) { .shot.mark img { height: 16svh; } .shot.mark { justify-content: flex-start; } }
 
-/* Identity: warm white, charcoal, stone grey, travertine accent, mono labels, technical grid */
-:root{--bg:#F4F1EA;--fg:#1E1C19;--mute:#55524c;--stone:#8C8A84;--trav:#C8B79A;--line:rgba(30,28,25,.16);--mono:'IBM Plex Mono',ui-monospace,monospace}
-html{background:var(--bg)}
-body{background:transparent}
-body::before{content:"";position:fixed;inset:0 var(--gutter);z-index:-1;pointer-events:none;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc(100%/12) 100%;box-shadow:inset -1px 0 0 var(--line)}
-::selection{background:var(--trav);color:var(--fg)}
-h1{font-size:clamp(3rem,10vw,9.5rem)}
-.eyebrow,.nav a,.caption,footer,figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
-.eyebrow,.nav a,figcaption,footer,.caption span:last-child{color:var(--stone)}
-.nav a:hover,.nav a[aria-current="page"],footer a:hover{color:var(--fg)}
-.panel p.text{color:#4a4742}
-.btn:hover{background:var(--trav);border-color:var(--trav);color:var(--fg)}
-.pillars a,.eco a{border-bottom:1px solid var(--trav)}
-.bleed{margin:0;border-top:1px solid var(--line);scroll-snap-align:start}
-.bleed img{display:block;width:100%;height:72svh;min-height:320px;object-fit:cover}
-.bleed figcaption{padding:12px var(--gutter);border-top:1px solid var(--line);background:var(--bg)}
 .shot.mark img{max-height:50svh;width:auto;margin:0 auto}
 
 /* The name: PETRUS, with P and S standing out and ETRU receding */
 .bigname{font-weight:200;font-size:clamp(4.2rem,19vw,17rem);line-height:.9;letter-spacing:.01em;max-width:none;margin:8px 0 36px}
-.bigname .dim{color:rgba(30,28,25,.26)}
+.bigname .dim{color:rgba(255,255,255,.28)}
 .parts{display:grid;grid-template-columns:1fr 2fr 1fr;gap:clamp(16px,3vw,48px);margin:0 0 40px}
-.parts div{border-top:1px solid var(--fg);padding-top:14px}
+.parts div{border-top:1px solid var(--line);padding-top:14px}
 .parts dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
 .parts dd{margin:8px 0 0;color:var(--mute);max-width:42ch}
 .panel p.text strong,.panel p.text b{font-weight:400;color:var(--fg)}
@@ -190,4 +174,7 @@ h1{font-size:clamp(3rem,10vw,9.5rem)}
 .eco li{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
 .eco b{font-weight:400}
 .eco span{color:var(--mute)}
-@media (max-width:700px){body::before{background-size:calc(100%/4) 100%}.parts{grid-template-columns:1fr}.eco li{grid-template-columns:1fr;gap:4px}}
+@media (max-width:700px){.parts{grid-template-columns:1fr}.eco li{grid-template-columns:1fr;gap:4px}}
+
+.eco a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+.eco a:hover{border-color:var(--fg)}
