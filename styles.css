@@ -215,3 +215,22 @@ body.compact main > .panel:first-child{padding-top:clamp(120px,16vw,170px)}
 /* Home opens with the name */
 .hero-name{margin:8px 0 18px}
 .atelier{font-size:clamp(1rem,2.2vw,1.8rem);letter-spacing:.62em;text-transform:uppercase;color:var(--mute);margin:0 0 36px .1em}
+
+/* Tomorrow runs wider than Jost, so the large type is set smaller */
+h1{font-size:clamp(2.2rem,5.4vw,4.4rem)}
+h2{font-size:clamp(1.9rem,4vw,3.2rem)}
+.bigname,h2.bigname{font-size:clamp(3rem,10vw,8rem)}
+.atelier{font-size:clamp(.85rem,1.6vw,1.3rem)}
+.panel p.text{font-size:clamp(.95rem,1.25vw,1.1rem)}
+@media (max-width:700px){h1{font-size:clamp(2rem,9vw,2.8rem)}h2{font-size:clamp(1.7rem,7vw,2.3rem)}.bigname,h2.bigname{font-size:clamp(3rem,17vw,5rem)}}
+
+/* Smaller text and logo */
+body{font-size:14px}
+.logo{font-size:13px}
+.nav a,.caption,footer,.eyebrow{font-size:11px}
+.btn{font-size:11px;padding:12px 26px}
+.bigname,h2.bigname{font-size:clamp(2.6rem,8vw,6.2rem)}
+h1{font-size:clamp(2rem,4.6vw,3.6rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.7rem)}
+.panel p.text{font-size:clamp(.9rem,1.1vw,1rem)}
+@media (max-width:700px){.bigname,h2.bigname{font-size:clamp(2.6rem,14vw,4rem)}h1{font-size:clamp(1.8rem,8vw,2.4rem)}h2{font-size:clamp(1.5rem,6vw,2rem)}}
