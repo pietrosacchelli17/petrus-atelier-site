@@ -1,0 +1,467 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.wrow,.wrow.flip{grid-template-columns:1fr}.wrow .wtext{max-width:760px}.sheet-wrap{max-width:720px}.wrow.flip .wtext{order:0}
+</style></head><body>
+<title>Keystone — Quotes, projects and finance for stone and joinery</title>
+<link rel="icon" href="images/keystone-mark-sage.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@200;300;400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Keystone: black, thin Tomorrow, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
+:root{
+  --bg:#000; --surface:#0a0a0a; --soft:#111; --ink:#fff; --mute:rgba(255,255,255,.62); --line:rgba(255,255,255,.18);
+  --gold:#bdbdbd; --dark:#0d0d0d; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.62); --stone:#8a8a8a; --btn:#fff; --on-btn:#000;
+  --font:Tomorrow,"Chakra Petch",system-ui,sans-serif; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:20px;padding-block:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto}
+a{color:inherit}
+h1,h2,h3{font-weight:200;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.6rem,6.6vw,5.6rem);line-height:1.02}
+h2{font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.06}
+h3{font-size:22px;line-height:1.2;font-weight:300;letter-spacing:0}
+b{font-weight:400}
+p{margin:0}
+.lede{font-size:clamp(17px,2vw,20px);color:var(--mute);max-width:60ch;text-wrap:pretty}
+.muted{color:var(--mute)}
+.small{font-size:13px;color:var(--mute);letter-spacing:.06em}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:400;margin-bottom:20px}
+.topbar{padding-top:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.topbar a{text-decoration:none;color:var(--mute)}.topbar a:hover{color:var(--ink)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px 22px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.logo img{width:22px;height:auto;display:block}
+.links{display:flex;gap:26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:0;background:var(--btn);color:var(--on-btn);font-weight:400;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--btn);cursor:pointer;text-decoration:none;font-family:inherit}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.sm{padding:10px 18px;font-size:11px}
+.btn:hover{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--on-btn)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+section{padding-block:96px;scroll-margin-top:12px;border-top:1px solid var(--line)}
+.hero{display:block;padding-block:clamp(64px,12vw,160px) 120px}.hero h1{max-width:16ch}.hero .lede{max-width:56ch}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero h1{margin-bottom:26px}
+.shot{background:transparent;border:1px solid var(--line);padding:0;min-width:0}
+.shot img{display:block;width:100%;height:auto;background:#fff}
+figure{margin:0;min-width:0}
+figcaption{margin-top:12px;font-size:13px;letter-spacing:.06em;color:var(--mute)}
+.shot figcaption{padding:12px 14px;margin:0;border-top:1px solid var(--line)}
+.problem{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.stats{background:var(--dark);border:1px solid var(--line);color:var(--on-dark);padding:36px;display:grid;gap:26px}
+.stats b{display:block;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:200;letter-spacing:-.02em;line-height:1;color:var(--ink)}
+.stats span{font-size:14px;color:var(--on-dark-mute)}
+.stats small{font-size:12px;color:var(--on-dark-mute)}
+.scraps{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.scrap{padding:9px 15px;border:1px dashed var(--line);color:var(--mute);font-size:14px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}
+.fstep{padding:22px;position:relative;min-width:0;border-right:1px solid var(--line)}
+.fstep:last-child{border-right:0}
+.fstep i{font-style:normal;font-size:12px;letter-spacing:.14em;color:var(--mute)}
+.fstep h3{font-size:19px;margin:8px 0 6px}
+.fstep p{font-size:14px;color:var(--mute)}
+.fstep.end{background:var(--ink)}.fstep.end h3,.fstep.end i{color:var(--on-btn)}.fstep.end p{color:rgba(0,0,0,.65)}
+.walk{display:grid;gap:96px;margin-top:80px}
+.wrow{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.wrow.flip{grid-template-columns:1.2fr .8fr}.wrow.flip .wtext{order:2}
+.wtext .num{font-size:14px;letter-spacing:.2em;color:var(--mute);font-weight:400}
+.wtext h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:12px 0 16px;font-weight:200;letter-spacing:-.01em}
+.wtext p{color:var(--mute)}
+.wtext ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+.wtext li,.card li{padding-left:18px;position:relative}
+.wtext li::before,.card li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.three{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.pdfs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:620px;justify-self:center;width:100%}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}
+.card{background:transparent;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px;min-width:0}
+.grid .card:nth-child(3n){border-right:0}.grid .card:nth-last-child(-n+3){border-bottom:0}
+.card p{color:var(--mute);margin-top:8px;font-size:15px}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.panel{background:var(--surface);border:1px solid var(--line);overflow:hidden;min-width:0}
+.chrome{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:12px;color:var(--mute)}
+.row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid var(--line);font-size:14px}
+.tag{font-size:11px;letter-spacing:.06em;padding:2px 9px;border:1px solid var(--line);font-weight:400;white-space:nowrap;color:var(--ink)}
+.good,.bad,.warn,.info{background:transparent;color:var(--ink)}.bad{border-color:var(--ink)}
+.phone{width:min(300px,100%);margin:0 auto;border:1px solid var(--ink);background:var(--surface);overflow:hidden}
+.phone .row{flex-direction:column;align-items:flex-start;gap:6px}
+.chat{display:flex;flex-direction:column;gap:10px;padding:18px;background:var(--soft)}
+.bub{padding:11px 15px;max-width:86%;font-size:14px;border:1px solid var(--line)}
+.bub.me{align-self:flex-end;background:var(--ink);color:var(--on-btn);border-color:var(--ink)}
+.tablewrap{overflow-x:auto;margin-top:32px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{text-align:left;padding:14px 18px;border-top:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);font-weight:400;border-top:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+tr.us td{background:var(--ink);color:var(--on-btn);font-weight:400}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px}
+.fitlist{display:grid;gap:0;border-top:1px solid var(--ink)}
+.fitlist div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.fitlist span{color:var(--mute);white-space:nowrap}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}
+.plan{border-right:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.plan:last-child{border-right:0}
+.plan .p{font-size:2.6rem;font-weight:200;letter-spacing:-.02em;line-height:1}
+.plan .p small{font-size:14px;font-weight:300;color:var(--mute);letter-spacing:0}
+.plan .u{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.plan p{font-size:14px;color:var(--mute)}
+.plan.pick{background:var(--ink);color:var(--on-btn)}.plan.pick p,.plan.pick .u,.plan.pick .p small{color:rgba(0,0,0,.62)}
+.badge{align-self:flex-start;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:2px 10px;border:1px solid var(--on-btn);color:var(--on-btn)}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.notes div{border-top:1px solid var(--ink);padding-top:14px;font-size:14px;color:var(--mute)}
+.notes b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.steps{display:grid;gap:0;margin-top:36px;counter-reset:s}
+.steps div{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.steps div::before{counter-increment:s;content:counter(s);font-size:2.4rem;font-weight:200;color:var(--ink);line-height:1}
+.steps b{display:block;font-size:18px;margin-bottom:4px}
+.steps p{color:var(--mute)}
+.data{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px;border:1px solid var(--line)}
+.data .card:last-child{border-right:0}.data .card{border-bottom:0}
+.about{background:var(--dark);border:1px solid var(--line);color:var(--on-dark);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:48px}
+.about h2{color:var(--ink);margin-bottom:24px}
+.about p{color:var(--on-dark);font-size:17px;margin-bottom:16px;max-width:60ch}
+.about p.m{color:var(--on-dark-mute);font-size:15px}
+.facts{display:grid;gap:22px;align-content:start}
+.facts div{border-top:1px solid var(--line);padding-top:14px}
+.facts b{display:block;font-size:2.2rem;font-weight:200;color:var(--ink);letter-spacing:-.01em;line-height:1.1}
+.facts span{font-size:14px;color:var(--on-dark-mute)}
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:300;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--mute);font-weight:200;font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--mute);max-width:70ch}
+.faq{margin-top:32px}
+.band{border:1px solid var(--line);padding:64px 32px;text-align:center;display:grid;gap:20px;justify-items:center}
+.band p{color:var(--mute);max-width:56ch}
+footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.notice{background:var(--soft);border-bottom:1px solid var(--line);color:var(--mute);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-inline:-20px}
+@media (max-width:960px){.flow{grid-template-columns:1fr 1fr}.fstep{border-bottom:1px solid var(--line)}.plans{grid-template-columns:1fr 1fr}.plan{border-bottom:1px solid var(--line)}.links{display:none}}
+@media (max-width:860px){.hero,.problem,.split,.wrow,.wrow.flip,.fit,.about,.data{grid-template-columns:1fr;gap:32px}.wrow.flip .wtext{order:0}.grid,.three,.notes{grid-template-columns:1fr}.grid .card{border-right:0;border-bottom:1px solid var(--line)!important}.grid .card:last-child{border-bottom:0!important}.data .card{border-right:0;border-bottom:1px solid var(--line)}section{padding-block:64px}.walk{gap:64px}}
+@media (max-width:560px){.flow,.plans,.pair{grid-template-columns:1fr}.fstep,.plan{border-right:0}.steps div{grid-template-columns:44px 1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Example estimate sheet, drawn in the page so it stays sharp at any size */
+.sheet-wrap{margin:0;min-width:0}
+.sheet{background:#fbfaf6;color:#1E1C19;border:1px solid var(--line);padding:clamp(18px,3vw,34px);font-size:13px;line-height:1.45;letter-spacing:.01em;box-shadow:0 30px 60px -40px rgba(30,28,25,.45)}
+.sheet small{display:block;color:#7a766e;font-size:11px}
+.sh-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid rgba(30,28,25,.18);padding-bottom:12px}
+.sh-logo{font-size:15px;font-weight:400;letter-spacing:.16em;text-transform:uppercase}
+.sh-addr{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7a766e}
+.sh-title{font-size:clamp(2rem,4vw,3rem);font-weight:200;line-height:1;margin:22px 0 6px}
+.sh-meta{display:flex;gap:18px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a766e;margin-bottom:18px}
+.sh-two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.sh-two b{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:400;color:#7a766e;margin-bottom:4px}
+.sh-two span{display:block}
+.sh-sec{margin-top:18px;padding:6px 0;border-top:1px solid #1E1C19;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.sh-floor{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#7a766e;margin:10px 0 2px}
+.sh-row{display:grid;grid-template-columns:minmax(0,2.6fr) .8fr .8fr 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(30,28,25,.1);align-items:baseline}
+.sh-row span:nth-child(n+2){text-align:right;white-space:nowrap}
+.sh-row .t{font-weight:400}
+.sh-sub{display:flex;justify-content:flex-end;gap:28px;padding:8px 0 2px;border-top:1px solid rgba(30,28,25,.18);font-weight:400}
+@media (max-width:560px){.sheet{font-size:12px}.sh-row{grid-template-columns:1fr auto;row-gap:2px}.sh-row span:nth-child(2),.sh-row span:nth-child(3){display:none}.sh-two{grid-template-columns:1fr}}
+
+/* Dot cursor on devices with a mouse; touch screens keep normal behaviour */
+.dot{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:2147483000;opacity:0;transition:width .18s,height .18s,margin .18s,opacity .2s}
+.dot.on{opacity:1}
+.dot.big{width:22px;height:22px;margin:-11px 0 0 -11px}
+@media (hover:hover) and (pointer:fine){html.has-dot,html.has-dot *{cursor:none!important}}
+@media (hover:none),(pointer:coarse){.dot{display:none}}
+
+/* Smaller text, set for the wider Tomorrow font */
+body{font-size:14px}
+h1{font-size:clamp(2.1rem,4.8vw,4rem)}
+h2{font-size:clamp(1.7rem,3.4vw,2.8rem)}
+h3{font-size:18px}
+.lede{font-size:clamp(15px,1.5vw,17px)}
+.wtext h3{font-size:clamp(1.4rem,2.3vw,1.85rem)}
+.stats b{font-size:clamp(2rem,4vw,2.9rem)}
+.facts b{font-size:1.8rem}.plan .p{font-size:2.1rem}
+.fstep h3{font-size:16px}.card p,.wtext ul{font-size:14px}
+
+/* Smaller estimate sheet */
+.sheet-wrap{max-width:440px}
+.sheet{font-size:11px;padding:18px 20px}
+.sheet small{font-size:9.5px}
+.sh-logo{font-size:12px}.sh-addr,.sh-meta,.sh-two b,.sh-floor{font-size:9px}
+.sh-title{font-size:clamp(1.4rem,2.2vw,1.8rem);margin:14px 0 4px}
+.sh-meta{margin-bottom:12px}.sh-two{margin-bottom:14px;gap:12px}
+.sh-sec{font-size:10px;margin-top:12px}
+.sh-row{padding:6px 0;gap:8px}
+.sh-sub{padding:6px 0 2px}
+@media (max-width:560px){.sheet-wrap{max-width:none}.sheet{font-size:11px}}
+</style>
+
+<div class="notice">Demo site. Example figures only.</div>
+<div class="wrap">
+<div class="topbar"><a href="https://petrus-atelier-site.vercel.app">← Petrus Atelier</a></div>
+<nav>
+  <a class="logo" href="#top" aria-label="Keystone"><img src="images/keystone-mark-sage.png" alt="" width="22" height="23">Keystone</a>
+  <div class="links"><a href="#how">How it works</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">Questions</a></div>
+  <a class="btn sm" href="#pilot">Become a pilot</a>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <div class="eyebrow">Built for stone, joinery and fit-out. Also for designers and developers</div>
+    <h1>One system for every job, from first enquiry to final invoice.</h1>
+    <p class="lede">Keystone keeps your quotes, projects, samples, costs and invoices in one place. When a quote is won it becomes a project, with nothing typed twice and nothing to reconcile.</p>
+    <div class="actions"><a class="btn" href="#pilot">Become a pilot partner</a><a class="btn ghost" href="#how">See how a job flows</a></div>
+    <p class="small" style="margin-top:22px">Designed and built by Pietro Sacchelli.</p>
+  </div>
+</header>
+
+<section class="problem">
+  <div>
+    <div class="eyebrow">The problem</div>
+    <h2>Most stone and trade firms run jobs on Excel, WhatsApp and memory.</h2>
+    <p class="lede" style="margin-top:20px">A quote exists in three versions and nobody is sure which one went out. Samples are asked for in a chat and forgotten. The margin on a job only becomes clear once it is finished. And the money comes in late.</p>
+    <div class="scraps"><span class="scrap">Quotes_v7_FINAL.xlsx</span><span class="scrap">“Did we send the sample?”</span><span class="scrap">Drawings, 14 emails deep</span><span class="scrap">Photos on three phones</span><span class="scrap">Invoices: sent? paid?</span></div>
+  </div>
+  <div class="stats" aria-label="Late payment in construction">
+    <div><b>93%</b><span>of construction firms report payment delays</span></div>
+    <div><b>53 days</b><span>average overdue on invoices</span></div>
+    <div><b>£30bn+</b><span>owed to construction SMEs, says the National Federation of Builders</span></div>
+    <small>Survey figures from Menzies and the NFB.</small>
+  </div>
+</section>
+
+<section id="how">
+  <div class="eyebrow">How it works</div>
+  <h2>One job, one record, from enquiry to paid.</h2>
+  <p class="lede" style="margin-top:16px">Every job follows the same path. The client, the scope and the price carry across each step, so nobody re-enters them and nothing gets lost or changed on the way.</p>
+  <div class="flow" role="list">
+    <div class="fstep" role="listitem"><i>1</i><h3>Sales project</h3><p>The client, the notes and the follow-ups.</p></div>
+    <div class="fstep" role="listitem"><i>2</i><h3>Estimate</h3><p>Priced in your layout, as a PDF with stone photos.</p></div>
+    <div class="fstep" role="listitem"><i>3</i><h3>Client signs</h3><p>Sent for signing. You see when it was opened.</p></div>
+    <div class="fstep" role="listitem"><i>4</i><h3>Project</h3><p>Created from the won quote, with its costs and margin.</p></div>
+    <div class="fstep end" role="listitem"><i>5</i><h3>Invoiced, paid</h3><p>Invoices come from the quote’s payment stages.</p></div>
+  </div>
+
+  <div class="walk">
+    <div class="wrow">
+      <div class="wtext"><div class="num">01</div><h3>Win the work</h3><p>Every opportunity sits on one board with its stage, its value and who owns it. Open one and the client, estimates, samples, notes and follow-ups are all together.</p><ul><li>Leads, quotes and won work in one list</li><li>Follow-up reminders on every quote</li><li>Duplicates merged, pipeline exported in one click</li></ul></div>
+    </div>
+
+    <div class="wrow flip">
+      <div class="wtext"><div class="num">02</div><h3>Price it, in your own layout</h3><p>Build the estimate by floor, room or area, with materials, finishes and installation. It goes out as a branded PDF with photos of the stone. Every earlier version is kept.</p><ul><li>Quantities in m², linear metres, days or units</li><li>Headings, notes and descriptions</li><li>PDF and Excel export</li></ul></div>
+      <figure class="sheet-wrap" aria-label="Example estimate, built from demo data">
+        <div class="sheet" role="img" aria-label="An estimate for Kensington Penthouse with materials grouped by floor, subtotals and installation">
+          <div class="sh-top"><span class="sh-logo">Keystone Stoneworks</span><span class="sh-addr">Unit 4, Keystone Yard · Marble Lane · London SE1 0AA</span></div>
+          <div class="sh-title">Estimate</div>
+          <div class="sh-meta"><span>EST-KP-2026-014</span><span>03/06/2026</span></div>
+          <div class="sh-two">
+            <div><b>Prepared for</b><span>Hartwell Interiors</span><span>Kensington Penthouse</span></div>
+            <div><b>Details</b><span>Account manager: Daniel Reeves</span><span>Supply &amp; install · GBP</span></div>
+          </div>
+          <div class="sh-sec">Material &amp; fabrication</div>
+          <div class="sh-floor">Ground floor</div>
+          <div class="sh-row"><span class="m">Calacatta Oro 20mm, polished<small>Hall, floor</small></span><span>27.52 m²</span><span>£428.00</span><span class="t">£11,778.56</span></div>
+          <div class="sh-row"><span class="m">Calacatta Oro 20mm, polished<small>Hall, skirting</small></span><span>18.4 lm</span><span>£102.00</span><span class="t">£1,876.80</span></div>
+          <div class="sh-row"><span class="m">Nero Marquina 20mm, honed<small>Kitchen worktop and upstand, with sink cut-out</small></span><span>1.83 m²</span><span>£618.20</span><span class="t">£1,131.31</span></div>
+          <div class="sh-floor">First floor</div>
+          <div class="sh-row"><span class="m">Travertine Classic 20mm, brushed<small>Ensuite, walls and floor</small></span><span>17.2 m²</span><span>£187.00</span><span class="t">£3,216.40</span></div>
+          <div class="sh-row"><span class="m">Bianco Carrara 20mm, honed<small>Vanity unit</small></span><span>1 unit</span><span>£866.00</span><span class="t">£866.00</span></div>
+          <div class="sh-sub"><span>Subtotal</span><span>£18,869.07</span></div>
+          <div class="sh-sec">Dry fit installation</div>
+          <div class="sh-row"><span class="m">Templating<small>Two days on site</small></span><span>2 days</span><span>£575.00</span><span class="t">£1,150.00</span></div>
+          <div class="sh-row"><span class="m">Installation labour<small>Adhesive, grouting and consumables included</small></span><span>1 unit</span><span>£9,800.00</span><span class="t">£9,800.00</span></div>
+          <div class="sh-sub"><span>Subtotal</span><span>£10,950.00</span></div>
+        </div>
+        <figcaption>An example estimate in your own layout, from demo data.</figcaption>
+      </figure>
+    </div>
+
+    <div class="wrow">
+      <div class="wtext"><div class="num">03</div><h3>Deliver the job</h3><p>A won quote becomes a project. Its timeline runs from quotation through templating, shop drawings, fabrication, shipping and installation to snagging and handover, with a checklist and the next action always visible.</p><ul><li>Tasks, documents and site photos by project</li><li>Snags with a photo and an owner</li><li>One-click client report</li></ul></div>
+    </div>
+
+    <div class="wrow flip">
+      <div class="wtext"><div class="num">04</div><h3>See the margin while the job runs</h3><p>Contract value, income received, costs by category and gross margin, worked out for you as expenses come in. You find out a job is losing money while you can still do something about it.</p></div>
+    </div>
+
+    <div class="wrow">
+      <div class="wtext"><div class="num">05</div><h3>Get paid</h3><p>Three steps: create the invoice from a payment stage, send it, tick it off when it is paid. Overdue invoices are flagged with the number of days, and paying one marks its stage paid in finance.</p><ul><li>Numbered PDF invoices from the quote</li><li>Who owes what, and how late</li><li>Money in and out across every project in one list</li></ul></div>
+    </div>
+  </div>
+
+</section>
+
+<section id="features">
+  <div class="eyebrow">What is in it</div>
+  <h2>Everything a job touches, in one place.</h2>
+  <div class="grid">
+    <div class="card"><h3>Quotes and estimates</h3><p>Quotes in your own format, in minutes.</p><ul><li>Standard, interior and exterior, or by room</li><li>Photos of the stone on the PDF</li><li>Accepted quote and every earlier version</li></ul></div>
+    <div class="card"><h3>Sales</h3><p>Know what is coming and who owns it.</p><ul><li>Pipeline from lead to won</li><li>Forecast weighted by stage</li><li>Weekly sales report</li></ul></div>
+    <div class="card"><h3>Samples and requests</h3><p>Never lose track of what was asked for.</p><ul><li>Sample board from requested to delivered</li><li>Quotation requests, assigned to a person</li><li>Import the weekly Excel report</li></ul></div>
+    <div class="card"><h3>Projects</h3><p>Every stage at a glance.</p><ul><li>Stage timeline, tasks and checklist</li><li>Installation timeline across jobs</li><li>Snagging and handover</li></ul></div>
+    <div class="card"><h3>Finance</h3><p>Margin while the job is still running.</p><ul><li>Contract value and income received</li><li>Costs by category, added up for you</li><li>Gross margin, or loss, automatically</li></ul></div>
+    <div class="card"><h3>Materials and pricing</h3><p>Your stock and your rates, in one place.</p><ul><li>Material inventory and stone collection</li><li>Pricing list and quote calculator</li><li>Slab nesting</li></ul></div>
+  </div>
+</section>
+
+<section class="split">
+  <div>
+    <div class="eyebrow">On site</div>
+    <h2>Built to work properly on a phone.</h2>
+    <p class="lede" style="margin-top:16px">People on site use their phones all day. Photograph a snag where you stand and assign it on the spot. Update a stage from the van. Keystone installs like an app, with no app store, and sends notifications.</p>
+    <p class="lede" style="margin-top:16px"><b style="color:var(--ink)">Coming next:</b> notifications and quick actions on WhatsApp, from registered team numbers only.</p>
+  </div>
+  <div style="display:grid;gap:18px">
+    <div class="phone" aria-label="Example of the phone view">
+      <div class="chrome"><span>Project Tracker · 12 projects</span></div>
+      <div class="row"><b>Canary Wharf Lobby</b><small class="muted">Meridian Developments</small><span><span class="tag info">Installation</span> <span class="tag bad">3 overdue</span></span></div>
+      <div class="row"><b>Mayfair Showroom Floor</b><small class="muted">Orion Retail Group</small><span class="tag warn">Material approval</span></div>
+      <div class="row"><b>Chelsea Townhouse</b><small class="muted">Delaney &amp; Co</small><span class="tag good">Handover</span></div>
+    </div>
+    <div class="panel" style="max-width:420px;justify-self:center;width:100%"><div class="chat">
+      <div class="bub">Invoice INV-009 is 12 days overdue. £21,600.</div>
+      <div class="bub me">What else is overdue?</div>
+      <div class="bub">2 tasks and 1 quote follow-up.</div>
+    </div></div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="eyebrow">Who it is for</div>
+  <h2>Firms that make and fit custom materials, job by job.</h2>
+  <p class="lede" style="margin-top:16px">Keystone was built for stone companies, but the same path from enquiry to invoice suits designers, developers and other businesses that quote, deliver and bill project work.</p>
+  <div class="fit">
+    <div>
+      <h3>Stone fabricators, contractors and installers with 5 to 30 people.</h3>
+      <p class="muted" style="margin-top:10px">Complex quotes, lots of jobs at once, installation work. Usually the owner or managing director decides.</p>
+      <h3 style="margin-top:28px">You probably need it if:</h3>
+      <div class="card" style="margin-top:12px"><ul style="margin:0"><li>A job lost money and nobody saw it coming</li><li>The spreadsheet has outgrown the business</li><li>One person holds too much in their head</li></ul></div>
+    </div>
+    <div>
+      <p class="small" style="margin-bottom:10px">How well Keystone fits each trade today</p>
+      <div class="fitlist">
+        <div>Natural stone fabrication and installation<span>Very high</span></div>
+        <div>Ceramic and terrazzo<span>Very high</span></div>
+        <div>Bespoke joinery and architectural millwork<span>High</span></div>
+        <div>Architectural metalwork<span>High</span></div>
+        <div>Specialist glazing and façades<span>High, with changes</span></div>
+        <div>Flooring and specialist finishes<span>Medium to high</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:64px;font-size:clamp(24px,3vw,30px);letter-spacing:-.035em">How it compares with what you use now</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Option</th><th>Examples</th><th>What it lacks for a stone firm</th></tr></thead>
+    <tbody>
+      <tr><td>Spreadsheets and chat</td><td>Excel, WhatsApp, email</td><td>No single record, margin known late, depends on memory</td></tr>
+      <tr><td>Trade job software</td><td>Fergus, Tradify, simPRO</td><td>Quoting by material, tracking samples, margin per job</td></tr>
+      <tr><td>Stone-specific tools</td><td>Moraware, Slabsmith</td><td>Mostly US, strong on the workshop, lighter on projects, finance and cash</td></tr>
+      <tr><td>General construction software</td><td>Procore, Pillar</td><td>Built for builders. Nothing made for stone or joinery</td></tr>
+      <tr class="us"><td>Keystone</td><td>Made for the trade</td><td>Covers the whole job, from quote to invoice</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small" style="margin-top:12px">My own reading of public product pages. Worth checking with a demo of each.</p>
+</section>
+
+<section id="pricing">
+  <div class="eyebrow">Pricing</div>
+  <h2>One flat price per company.</h2>
+  <p class="lede" style="margin-top:16px">The bill does not go up every time someone joins the team.</p>
+  <div class="plans">
+    <div class="plan"><h3>Starter</h3><div class="p">£149<small> /month</small></div><div class="u">Up to 5 users</div><p>CRM, pipeline, tasks, documents and basic projects.</p></div>
+    <div class="plan pick"><span class="badge">Suggested</span><h3>Growth</h3><div class="p">£299<small> /month</small></div><div class="u">Up to 10 users</div><p>Everything in Starter, plus quotes, inventory, timeline, reports and invoices.</p></div>
+    <div class="plan"><h3>Business</h3><div class="p">£499<small> /month</small></div><div class="u">Up to 20 users</div><p>More than one site, automations and priority support.</p></div>
+    <div class="plan"><h3>Enterprise</h3><div class="p" style="font-size:30px">By quote</div><div class="u">More users</div><p>Integrations, high volumes and a service-level agreement.</p></div>
+  </div>
+  <div class="notes">
+    <div><b>Setting up</b>£300 to £500 on Starter, £500 to £1,000 on Growth, from £1,000 on Business.</div>
+    <div><b>Custom work</b>£60 to £90 an hour, and only if other customers would want it too.</div>
+    <div><b>For comparison</b>A team of 9 on Moraware Systemize pays about $800 a month. On Keystone Growth it is £299.</div>
+  </div>
+  <p class="small" style="margin-top:20px">Proposed prices, excluding VAT. Pilot partners help set them.</p>
+</section>
+
+<section id="start">
+  <div class="split" style="align-items:start">
+    <div>
+      <div class="eyebrow">Getting started</div>
+      <h2>Up and running within 30 days.</h2>
+      <p class="lede" style="margin-top:16px">One product for everyone, set up for your company. If three to five firms ask for the same thing, it goes into the product for all of them.</p>
+    </div>
+    <div class="steps">
+      <div><span><b>A conversation</b><p>What you use today, what it costs you, and where jobs go wrong.</p></span></div>
+      <div><span><b>A demo with jobs like yours</b><p>I show Keystone running on real-looking work, from enquiry to invoice.</p></span></div>
+      <div><span><b>Set up for your company</b><p>Your quote layout, your stages, your team and roles, your contacts brought in.</p></span></div>
+      <div><span><b>Use it and tell me what is missing</b><p>Pilot partners shape what comes next.</p></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="data">
+  <div class="eyebrow">Your data</div>
+  <h2>Your business data stays yours.</h2>
+  <div class="data">
+    <div class="card"><h3>In place today</h3><ul><li>Data stored in an EU database region</li><li>Row-level security on every table</li><li>Admin, manager and user roles, so everyone sees what they should</li><li>Scheduled backups, with a tested restore being set up</li><li>Export to Excel at any time</li></ul></div>
+    <div class="card"><h3>Before another company joins</h3><ul><li>Each company’s data kept apart, with automated tests</li><li>Two-step login for admins and an audit log</li><li>A restore test and a security test by an outside firm</li><li>Data-processing terms under UK GDPR</li></ul></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <div class="eyebrow" style="color:var(--on-dark-mute)">About</div>
+      <h2>Why I built it.</h2>
+      <p>Across the trade, the same thing happens again and again: jobs live in spreadsheets, chats and email. Quotes end up in several versions, samples are hard to track and the margin on a job is only known late. Most of the software out there was not made for this kind of work.</p>
+      <p>I wanted one place where a job could be followed from the first enquiry to the final invoice, built around how stone firms really work. So I built it.</p>
+      <p class="m"><b style="color:var(--on-dark)">Pietro Sacchelli, founder.</b> I trained as an architect (BArch, University of Westminster, 2024) before moving into stone. Reading drawings, doing take-offs, working out slab yields and pricing specialist materials is what I know, so Keystone is built the way an estimator actually works. I designed and built it myself.</p>
+    </div>
+    <div class="facts" aria-label="Keystone in use">
+      <div><b>One record</b><span>for every job, from enquiry to invoice</span></div>
+      <div><b>On any phone</b><span>installs like an app, no store needed</span></div>
+      <div><b>30 days</b><span>to get a pilot partner up and running</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="eyebrow">Questions</div>
+  <h2>Things firms usually ask.</h2>
+  <div class="faq">
+    <details><summary>Can the estimates look like ours?</summary><p>Yes. Estimates come out in your company’s own layout, with your logo, your headings and photos of the stone, as a PDF or Excel file.</p></details>
+    <details><summary>We already have years of contacts and jobs in Excel. Can we bring them in?</summary><p>Yes. Contacts and companies are brought in during setup, and some reports, like the weekly sample report, import straight from Excel.</p></details>
+    <details><summary>Does it work for the people on site?</summary><p>Yes. It runs on a phone, installs to the home screen like an app and sends notifications. Snags, photos and stage updates can all be done on site.</p></details>
+    <details><summary>Who can see what?</summary><p>Each person has a role: admin, manager or user. The database itself enforces what each role can see, not just the screens.</p></details>
+    <details><summary>What if we want to leave?</summary><p>Your data exports to Excel at any time. There is no lock-in.</p></details>
+    <details><summary>We are not a stone firm. Is it for us?</summary><p>Stone, terrazzo and ceramics fit best today. Joinery, metalwork and glazing fit well and are next. Designers, developers and other project-based businesses can use it too, because the flow from enquiry to quote, project and invoice is the same. If you run work job by job, it is worth a conversation.</p></details>
+  </div>
+</section>
+
+<section id="pilot">
+  <div class="band">
+    <div class="eyebrow" style="margin:0">Pilot partners</div>
+    <h2>Looking for 3 to 5 pilot partners.</h2>
+    <p>Keystone is built and working. I am inviting a few stone firms to run it on their own jobs and tell me honestly what is missing. I am happy to show it running and talk through the numbers.</p>
+    <a class="btn" href="https://www.linkedin.com/search/results/people/?keywords=Pietro%20Sacchelli" target="_blank" rel="noopener">Message Pietro Sacchelli on LinkedIn</a>
+  </div>
+</section>
+
+<footer><span>Keystone · Quotes · Projects · Finance</span><span>Designed and built by Pietro Sacchelli</span></footer>
+</div>
+
+<script>
+// Dot cursor (mouse devices only)
+if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+  document.documentElement.classList.add('has-dot');
+  let x = 0, y = 0, raf = 0;
+  const draw = () => { dot.style.transform = `translate(${x}px, ${y}px)`; raf = 0; };
+  addEventListener('mousemove', e => {
+    x = e.clientX; y = e.clientY; dot.classList.add('on');
+    if (!raf) raf = requestAnimationFrame(draw);
+    dot.classList.toggle('big', !!e.target.closest('a, button, summary, input, textarea, select, label'));
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => dot.classList.remove('on'));
+}
+</script>
+</body></html>

@@ -1,7 +1,7 @@
 // Petrus Atelier is the main site. Keystone, PS Gallery and [AT]last are separate websites.
 // Change an address here if a site moves, for example to a custom domain.
 const SITES = {
-  keystone:  'https://keystone-website-two.vercel.app',
+  keystone:  'keystone/',
   psgallery: 'https://psgallery-gamma.vercel.app',
   atlast:    'https://atlast-nu.vercel.app',
 };
