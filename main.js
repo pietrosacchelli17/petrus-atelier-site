@@ -48,3 +48,37 @@ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   }, { passive: true });
   document.addEventListener('mouseleave', () => dot.classList.remove('on'));
 }
+
+// Photograph pile: each new photo lands on top at its own spot, same size and sharp; the earlier ones stay behind it.
+(() => {
+  const box = document.querySelector('[data-stack]');
+  if (!box) return;
+  const imgs = [...box.querySelectorAll('img')];
+  const capEl = document.querySelector('[data-stack-cap]');
+  const cntEl = document.querySelector('[data-stack-count]');
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const spots = [[0, 4], [24, 0], [8, 20], [26, 15]];   // left %, top % for each arrival
+  const keep = 3;                                       // how many photos stay in the pile
+  let pile = [], z = 0, cur = -1, timer = 0, count = 0;
+  const show = k => {
+    const im = imgs[k];
+    const [x, y] = spots[count++ % spots.length];
+    im.className = 'is-enter';
+    im.style.left = x + '%'; im.style.top = y + '%'; im.style.zIndex = ++z;
+    void im.offsetWidth;                                // register the start state
+    im.className = 'is-in';
+    pile = pile.filter(p => p !== k); pile.push(k);
+    while (pile.length > keep) imgs[pile.shift()].className = 'is-out';
+    cur = k;
+    if (capEl) capEl.textContent = im.dataset.cap || '';
+    if (cntEl) cntEl.textContent = `(${k + 1}/${imgs.length})`;
+  };
+  const step = () => show((cur + 1) % imgs.length);
+  const start = () => { if (!still) timer = setInterval(step, 3400); };
+  const stop = () => clearInterval(timer);
+  show(0);
+  box.addEventListener('click', () => { stop(); step(); start(); });
+  box.addEventListener('mouseenter', stop);
+  box.addEventListener('mouseleave', start);
+  start();
+})();
