@@ -5,7 +5,7 @@
   --fg: #fff;
   --mute: rgba(255, 255, 255, 0.62);
   --line: rgba(255, 255, 255, 0.18);
-  --font: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --font: 'Tomorrow', 'Chakra Petch', system-ui, sans-serif;
   --gutter: clamp(20px, 4vw, 48px);
 }
 
