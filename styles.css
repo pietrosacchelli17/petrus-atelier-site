@@ -248,3 +248,8 @@ h2{font-size:clamp(1.5rem,3vw,2.3rem)}
 .atelier{font-size:clamp(.75rem,1.3vw,1.05rem)}
 .pillars h3{font-size:clamp(1.05rem,1.5vw,1.3rem)}
 @media (max-width:700px){h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}h2{font-size:clamp(1.4rem,5.6vw,1.8rem)}.bigname,h2.bigname{font-size:clamp(2.4rem,13vw,3.6rem)}}
+
+/* Home: sections fit their content, so there is less empty scrolling */
+body.compact main > .panel:first-child{min-height:78svh;display:flex;align-items:center}
+body.compact .panel{padding-block:clamp(56px,8vw,88px)}
+body.compact main > .panel:first-child{padding-top:clamp(110px,14vw,150px)}
