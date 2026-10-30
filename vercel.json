@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/psgallery/", "destination": "/psgallery", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/psgallery", "destination": "https://psgallery-gamma.vercel.app/psgallery" },
     { "source": "/psgallery/:path*", "destination": "https://psgallery-gamma.vercel.app/psgallery/:path*" }

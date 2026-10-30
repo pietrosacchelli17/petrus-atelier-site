@@ -2,7 +2,7 @@
 // Change an address here if a site moves, for example to a custom domain.
 const SITES = {
   keystone:  'keystone/',
-  psgallery: '/psgallery/',
+  psgallery: '/psgallery',
   atlast:    'https://atlast-nu.vercel.app',
 };
 
