@@ -234,3 +234,17 @@ h1{font-size:clamp(2rem,4.6vw,3.6rem)}
 h2{font-size:clamp(1.7rem,3.4vw,2.7rem)}
 .panel p.text{font-size:clamp(.9rem,1.1vw,1rem)}
 @media (max-width:700px){.bigname,h2.bigname{font-size:clamp(2.6rem,14vw,4rem)}h1{font-size:clamp(1.8rem,8vw,2.4rem)}h2{font-size:clamp(1.5rem,6vw,2rem)}}
+
+/* Text smaller in general */
+body{font-size:13px;line-height:1.6}
+.logo{font-size:12px}
+.nav a,.caption,footer,.eyebrow{font-size:10.5px}
+.btn{font-size:10.5px;padding:11px 22px}
+.panel p.text{font-size:clamp(.82rem,.95vw,.92rem);max-width:44ch}
+.eco li,.parts dd,.pillars p{font-size:13px}
+h1{font-size:clamp(1.8rem,4vw,3rem)}
+h2{font-size:clamp(1.5rem,3vw,2.3rem)}
+.bigname,h2.bigname{font-size:clamp(2.4rem,7vw,5.2rem)}
+.atelier{font-size:clamp(.75rem,1.3vw,1.05rem)}
+.pillars h3{font-size:clamp(1.05rem,1.5vw,1.3rem)}
+@media (max-width:700px){h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}h2{font-size:clamp(1.4rem,5.6vw,1.8rem)}.bigname,h2.bigname{font-size:clamp(2.4rem,13vw,3.6rem)}}
