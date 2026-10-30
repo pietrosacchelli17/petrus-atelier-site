@@ -253,3 +253,9 @@ h2{font-size:clamp(1.5rem,3vw,2.3rem)}
 body.compact main > .panel:first-child{min-height:78svh;display:flex;align-items:center}
 body.compact .panel{padding-block:clamp(56px,8vw,88px)}
 body.compact main > .panel:first-child{padding-top:clamp(110px,14vw,150px)}
+
+/* Photo beside the name, so the right side is not empty */
+.hero-shot{align-self:center;display:flex;flex-direction:column;align-items:flex-end}
+.hero-shot img{width:auto;max-width:100%;max-height:62svh;object-fit:contain;object-position:right center}
+.hero-shot figcaption{text-align:right}
+@media (max-width:900px){.hero-shot{align-items:flex-start}.hero-shot img{max-height:42svh;object-position:left center}.hero-shot figcaption{text-align:left}}
