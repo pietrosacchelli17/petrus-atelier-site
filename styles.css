@@ -211,3 +211,7 @@ body.compact main > .panel:first-child{padding-top:clamp(120px,16vw,170px)}
 
 .pillars.three{grid-template-columns:repeat(3,1fr)}
 @media (max-width:900px){.pillars.three{grid-template-columns:1fr}.pillars.three > div{border-right:0;border-bottom:1px solid var(--line)}.pillars.three > div:last-child{border-bottom:0}}
+
+/* Home opens with the name */
+.hero-name{margin:8px 0 18px}
+.atelier{font-size:clamp(1rem,2.2vw,1.8rem);letter-spacing:.62em;text-transform:uppercase;color:var(--mute);margin:0 0 36px .1em}
