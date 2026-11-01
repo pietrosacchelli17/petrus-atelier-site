@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.wrow,.wrow.flip{grid-template-columns:1fr}.wrow .wtext{max-width:760px}.sheet-wrap{max-width:720px}.wrow.flip .wtext{order:0}
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{--gut:clamp(20px,4vw,48px);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.wrow,.wrow.flip{grid-template-columns:1fr}.wrow .wtext{max-width:760px}.sheet-wrap{max-width:720px}.wrow.flip .wtext{order:0}
 </style></head><body>
 <title>Keystone — Quotes, projects and finance for stone and joinery</title>
 <link rel="icon" href="images/keystone-mark-sage.png">
@@ -13,8 +13,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:20px;padding-block:0;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:var(--gut);padding-block:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto}
 a{color:inherit}
 h1,h2,h3{font-weight:200;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h1{font-size:clamp(2.6rem,6.6vw,5.6rem);line-height:1.02}
@@ -26,8 +26,9 @@ p{margin:0}
 .muted{color:var(--mute)}
 .small{font-size:13px;color:var(--mute);letter-spacing:.06em}
 .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:400;margin-bottom:20px}
-.topbar{padding-top:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.topbar a{text-decoration:none;color:var(--mute)}.topbar a:hover{color:var(--ink)}
+.site{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.96);backdrop-filter:blur(8px)}
+.topbar{padding-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.topbar a{display:inline-flex;align-items:center;gap:8px;padding:10px 0;text-decoration:none;color:var(--ink)}.topbar a:hover{text-decoration:underline;text-underline-offset:5px}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px 22px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
 .logo img{width:22px;height:auto;display:block}
@@ -136,7 +137,7 @@ details p{margin-top:10px;color:var(--mute);max-width:70ch}
 .band{border:1px solid var(--line);padding:64px 32px;text-align:center;display:grid;gap:20px;justify-items:center}
 .band p{color:var(--mute);max-width:56ch}
 footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.notice{background:var(--soft);border-bottom:1px solid var(--line);color:var(--mute);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-inline:-20px}
+.notice{background:var(--soft);border-bottom:1px solid var(--line);color:var(--mute);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-inline:calc(-1*var(--gut))}
 @media (max-width:960px){.flow{grid-template-columns:1fr 1fr}.fstep{border-bottom:1px solid var(--line)}.plans{grid-template-columns:1fr 1fr}.plan{border-bottom:1px solid var(--line)}.links{display:none}}
 @media (max-width:860px){.hero,.problem,.split,.wrow,.wrow.flip,.fit,.about,.data{grid-template-columns:1fr;gap:32px}.wrow.flip .wtext{order:0}.grid,.three,.notes{grid-template-columns:1fr}.grid .card{border-right:0;border-bottom:1px solid var(--line)!important}.grid .card:last-child{border-bottom:0!important}.data .card{border-right:0;border-bottom:1px solid var(--line)}section{padding-block:64px}.walk{gap:64px}}
 @media (max-width:560px){.flow,.plans,.pair{grid-template-columns:1fr}.fstep,.plan{border-right:0}.steps div{grid-template-columns:44px 1fr}}
@@ -216,12 +217,14 @@ h3{font-size:18px}
 
 <div class="notice">Demo site. Example figures only.</div>
 <div class="wrap">
+<div class="site">
 <div class="topbar"><a href="https://petrus-atelier-site.vercel.app">← Petrus Atelier</a></div>
 <nav>
   <a class="logo" href="#top" aria-label="Keystone"><img src="images/keystone-mark-sage.png" alt="" width="22" height="23">Keystone</a>
   <div class="links"><a href="#how">How it works</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">Questions</a></div>
   <a class="btn sm" href="#pilot">Become a pilot</a>
 </nav>
+</div>
 
 <header class="hero" id="top">
   <div>
