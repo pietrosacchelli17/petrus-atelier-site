@@ -13,8 +13,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:var(--gut);padding-block:0;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1280px;margin:0 auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:0;padding-block:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:var(--gut)}
 a{color:inherit}
 h1,h2,h3{font-weight:200;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h1{font-size:clamp(2.6rem,6.6vw,5.6rem);line-height:1.02}
@@ -137,7 +137,7 @@ details p{margin-top:10px;color:var(--mute);max-width:70ch}
 .band{border:1px solid var(--line);padding:64px 32px;text-align:center;display:grid;gap:20px;justify-items:center}
 .band p{color:var(--mute);max-width:56ch}
 footer{padding-block:34px 56px;border-top:1px solid var(--line);color:var(--mute);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.notice{background:var(--soft);border-bottom:1px solid var(--line);color:var(--mute);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-inline:calc(-1*var(--gut))}
+.notice{background:var(--soft);border-bottom:1px solid var(--line);color:var(--mute);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-inline:0}
 @media (max-width:960px){.flow{grid-template-columns:1fr 1fr}.fstep{border-bottom:1px solid var(--line)}.plans{grid-template-columns:1fr 1fr}.plan{border-bottom:1px solid var(--line)}.links{display:none}}
 @media (max-width:860px){.hero,.problem,.split,.wrow,.wrow.flip,.fit,.about,.data{grid-template-columns:1fr;gap:32px}.wrow.flip .wtext{order:0}.grid,.three,.notes{grid-template-columns:1fr}.grid .card{border-right:0;border-bottom:1px solid var(--line)!important}.grid .card:last-child{border-bottom:0!important}.data .card{border-right:0;border-bottom:1px solid var(--line)}section{padding-block:64px}.walk{gap:64px}}
 @media (max-width:560px){.flow,.plans,.pair{grid-template-columns:1fr}.fstep,.plan{border-right:0}.steps div{grid-template-columns:44px 1fr}}
