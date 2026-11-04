@@ -19,32 +19,52 @@
 
 <header class="site-header">
   <a class="logo" href="index.html">Petrus Atelier</a>
-  <nav aria-label="Primary"><ul class="nav">
-    <li><a href="#about">About</a></li>
-    <li><a href="the-name.html">The name</a></li>
-    <li><a href="#" data-site="keystone">Keystone</a></li>
-    <li><a href="#" data-site="psgallery">PS Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul></nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
 </header>
 
+<nav class="menu" id="menu" aria-label="Menu" inert>
+  <ul>
+    <li><a href="index.html">Petrus Atelier</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#" data-site="keystone">Keystone</a></li>
+    <li><a href="#" data-site="psgallery">PS Gallery</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a class="ext" href="https://www.instagram.com/psgallery.jpg" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+</nav>
+
 <main id="main">
+<section class="stage" data-stage aria-roledescription="carousel" aria-label="Photographs by Pietro Sacchelli">
+  <div class="stage-imgs" data-imgs>
+    <img src="images/slides/01.jpg" alt="Beneath the Botín, Santander" data-title="Beneath the Botín" data-meta="Santander · 2025" data-href="/psgallery/photo/santander-01">
+    <img src="images/slides/02.jpg" alt="La Casa di Marmo, Milan" data-title="La Casa di Marmo" data-meta="Milan · 2026" data-href="/psgallery/photo/milan-01" loading="lazy">
+    <img src="images/slides/03.jpg" alt="Future Sink, Milan" data-title="Future Sink" data-meta="Milan · 2022" data-href="/psgallery/photo/milan-02" loading="lazy">
+    <img src="images/slides/04.jpg" alt="Finlandia Hall, Helsinki" data-title="Finlandia Hall" data-meta="Helsinki · 2024" data-href="/psgallery/photo/helsinki-02" loading="lazy">
+    <img src="images/slides/05.jpg" alt="A line of light, Naoshima" data-title="A line of light" data-meta="Naoshima · 2018" data-href="/psgallery/photo/naoshima-01" loading="lazy">
+    <img src="images/slides/06.jpg" alt="Barbican Centre, London" data-title="Barbican Centre" data-meta="London · 2024" data-href="/psgallery/photo/london-03" loading="lazy">
+    <img src="images/slides/07.jpg" alt="Helsinki Airport, Helsinki" data-title="Helsinki Airport" data-meta="Helsinki · 2025" data-href="/psgallery/photo/helsinki-04" loading="lazy">
+    <img src="images/slides/08.jpg" alt="Emersa Console, Carrara" data-title="Emersa Console" data-meta="Carrara · 2025" data-href="/psgallery/photo/carrara-01" loading="lazy">
+    <img src="images/slides/09.jpg" alt="Keeling House, London" data-title="Keeling House" data-meta="London · 2024" data-href="/psgallery/photo/london-07" loading="lazy">
+    <img src="images/slides/10.jpg" alt="Pine shore, Helsinki" data-title="Pine shore" data-meta="Helsinki" data-href="/psgallery/photo/helsinki-01" loading="lazy">
+  </div>
+  <div class="stage-info">
+    <div class="stage-text" data-text>
+      <p class="stage-meta" data-meta>Santander · 2025</p>
+      <h1 class="stage-title" data-title>Beneath the Botín</h1>
+    </div>
+    <div class="stage-right">
+      <a class="stage-link" data-link href="/psgallery/photo/santander-01">View photo <span aria-hidden="true">→</span></a>
+      <p class="stage-count" data-count>01 / 10</p>
+    </div>
+  </div>
+</section>
 
   <section class="panel" data-caption="Petrus Atelier">
     <div class="inner">
-      <h1 class="bigname hero-name fi" aria-label="Petrus Atelier"><span>P</span><span class="dim">ETRU</span><span>S</span></h1>
+      <h2 class="bigname hero-name fi" aria-label="Petrus Atelier"><span>P</span><span class="dim">ETRU</span><span>S</span></h2>
       <p class="atelier fi" aria-hidden="true">Atelier</p>
       <p class="text fi">An atelier by Pietro Sacchelli, London. Between architecture, materials and systems: how an idea becomes something built, and how well it is seen, specified and delivered along the way.</p>
-    </div>
-    <div class="stack-wrap fi">
-      <div class="stack" data-stack role="img" aria-label="Photographs by Pietro Sacchelli">
-        <img src="images/hero-1.jpg" alt="A hexagon-patterned ceiling over a waterfront terrace at the Centro Botín, Santander" data-cap="Beneath the Botín · Santander" width="680" height="906">
-        <img src="images/hero-2.jpg" alt="A dark red marble wall above a pale stone block in La Casa di Marmo, Milan" data-cap="La Casa di Marmo · Milan" width="680" height="906" loading="lazy">
-        <img src="images/hero-3.jpg" alt="Pine trees on the Helsinki shoreline in low sun" data-cap="Pine shore · Helsinki" width="680" height="906" loading="lazy">
-        <img src="images/hero-4.jpg" alt="The white marble facade of Finlandia Hall in Helsinki under snow" data-cap="Finlandia Hall · Helsinki" width="680" height="906" loading="lazy">
-        <img src="images/hero-5.jpg" alt="The Keystone logo" data-cap="Keystone · Software" width="680" height="906" loading="lazy">
-      </div>
-      <p class="stack-cap"><span data-stack-cap>Beneath the Botín · Santander</span><span data-stack-count>(1/5)</span></p>
+      <a class="btn fi" href="about.html">About</a>
     </div>
   </section>
 
@@ -85,15 +105,6 @@
     </figure>
   </section>
 
-  <section class="panel" data-caption="About" id="about">
-    <div class="inner">
-      <p class="eyebrow fi">About</p>
-      <h2 class="fi">Pietro Sacchelli.</h2>
-      <p class="text fi">Italian, based in London. Founder of Petrus Atelier, which brings together PS Gallery, an archive of architectural photography, and Keystone, software for stone and joinery.</p>
-      <p class="text fi">His photographs look at modernist and contemporary architecture, historic buildings, details and natural materials, and occasionally landscape and travel: composition, geometry, light, texture and spatial relationships.</p>
-    </div>
-  </section>
-
   <section class="panel" data-caption="Contact" id="contact">
     <div class="inner">
       <p class="eyebrow fi">Contact</p>
@@ -114,12 +125,6 @@
   </div>
 </footer>
 
-<div class="caption" aria-hidden="true">
-  <span id="cap">Petrus Atelier</span>
-  <span id="count">(1/9)</span>
-  <span>Scroll</span>
-</div>
-
-<script src="main.js?v=6" defer></script>
+<script src="main.js?v=7" defer></script>
 </body>
 </html>

@@ -16,13 +16,19 @@
 
 <header class="site-header">
   <a class="logo" href="index.html">Petrus Atelier</a>
-  <nav aria-label="Primary"><ul class="nav">
-    <li><a href="the-name.html" aria-current="page">The name</a></li>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu" inert>
+  <ul>
+    <li><a href="index.html">Petrus Atelier</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="#" data-site="keystone">Keystone</a></li>
     <li><a href="#" data-site="psgallery">PS Gallery</a></li>
     <li><a href="index.html#contact">Contact</a></li>
-  </ul></nav>
-</header>
+    <li><a class="ext" href="https://www.instagram.com/psgallery.jpg" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+</nav>
 
 <main id="main">
 
@@ -78,6 +84,6 @@
   <span>Scroll</span>
 </div>
 
-<script src="main.js?v=6" defer></script>
+<script src="main.js?v=7" defer></script>
 </body>
 </html>

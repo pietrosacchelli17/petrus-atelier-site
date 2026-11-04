@@ -49,36 +49,63 @@ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   document.addEventListener('mouseleave', () => dot.classList.remove('on'));
 }
 
-// Photograph pile: each new photo lands on top at its own spot, same size and sharp; the earlier ones stay behind it.
+// Menu: three lines open a full black page.
 (() => {
-  const box = document.querySelector('[data-stack]');
-  if (!box) return;
-  const imgs = [...box.querySelectorAll('img')];
-  const capEl = document.querySelector('[data-stack-cap]');
-  const cntEl = document.querySelector('[data-stack-count]');
-  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const spots = [[0, 4], [24, 0], [8, 20], [26, 15]];   // left %, top % for each arrival
-  const keep = 3;                                       // how many photos stay in the pile
-  let pile = [], z = 0, cur = -1, timer = 0, count = 0;
-  const show = k => {
-    const im = imgs[k];
-    const [x, y] = spots[count++ % spots.length];
-    im.className = 'is-enter';
-    im.style.left = x + '%'; im.style.top = y + '%'; im.style.zIndex = ++z;
-    void im.offsetWidth;                                // register the start state
-    im.className = 'is-in';
-    pile = pile.filter(p => p !== k); pile.push(k);
-    while (pile.length > keep) imgs[pile.shift()].className = 'is-out';
-    cur = k;
-    if (capEl) capEl.textContent = im.dataset.cap || '';
-    if (cntEl) cntEl.textContent = `(${k + 1}/${imgs.length})`;
+  const btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
+  if (!btn || !menu) return;
+  const set = open => {
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.toggleAttribute('inert', !open);
   };
-  const step = () => show((cur + 1) % imgs.length);
-  const start = () => { if (!still) timer = setInterval(step, 3400); };
+  btn.addEventListener('click', () => set(!document.body.classList.contains('menu-open')));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
+
+// Photo stage: the photographs change by themselves, with their name and a link to the photo.
+(() => {
+  const st = document.querySelector('[data-stage]');
+  if (!st) return;
+  const imgs = [...st.querySelectorAll('[data-imgs] img')];
+  const text = st.querySelector('[data-text]'), meta = st.querySelector('[data-meta]'), title = st.querySelector('[data-title]');
+  const link = st.querySelector('[data-link]'), count = st.querySelector('[data-count]');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur = 0, timer = 0, touchX = null;
+  const pad = n => String(n).padStart(2, '0');
+  const show = k => {
+    k = (k + imgs.length) % imgs.length;
+    if (k === cur) return;
+    const prev = imgs[cur];
+    prev.classList.remove('on'); prev.classList.add('off');
+    setTimeout(() => prev.classList.remove('off'), 1700);
+    imgs[k].classList.add('on');
+    cur = k;
+    text.classList.add('swap');
+    setTimeout(() => {
+      const im = imgs[k];
+      meta.textContent = im.dataset.meta; title.textContent = im.dataset.title; link.href = im.dataset.href;
+      count.textContent = `${pad(k + 1)} / ${pad(imgs.length)}`;
+      text.classList.remove('swap');
+    }, 350);
+  };
+  const start = () => { if (!still) timer = setInterval(() => show(cur + 1), 5000); };
   const stop = () => clearInterval(timer);
-  show(0);
-  box.addEventListener('click', () => { stop(); step(); start(); });
-  box.addEventListener('mouseenter', stop);
-  box.addEventListener('mouseleave', start);
+  const go = d => { stop(); show(cur + d); start(); };
+  imgs[0].classList.add('on');
+  imgs.forEach(im => im.addEventListener('click', () => go(1)));
+  st.addEventListener('mouseenter', stop); st.addEventListener('mouseleave', start);
+  addEventListener('keydown', e => {
+    if (document.body.classList.contains('menu-open')) return;
+    if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1);
+  });
+  st.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  st.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+    touchX = null;
+  });
   start();
 })();
