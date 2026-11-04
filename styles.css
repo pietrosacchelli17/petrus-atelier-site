@@ -333,3 +333,12 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 .pillars.three > div + div{padding-left:clamp(10px,2.4vw,32px);border-left:1px solid var(--line)}
 .pillars.three h3{font-size:clamp(.95rem,3.4vw,1.5rem);margin-bottom:14px}
 .pillars.three p{font-size:clamp(.78rem,2.6vw,.95rem)}
+
+/* Keystone on the home page: white with black text */
+.panel.light{background:#fff;color:#000;border-top:0}
+.panel.light .eyebrow,.panel.light p.text{color:rgba(0,0,0,.65)}
+.panel.light .btn{border-color:#000;color:#000;background:transparent}
+.panel.light .btn:hover{background:#000;color:#fff}
+.panel.light .shot{border-color:rgba(0,0,0,.16)}
+.panel.light :focus-visible{outline-color:#000}
+.panel.light + .panel{border-top:0}

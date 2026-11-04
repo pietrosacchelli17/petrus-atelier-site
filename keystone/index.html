@@ -5,11 +5,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@200;300;400&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
-/* Keystone: black, thin Tomorrow, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
+/* Keystone: white with black text, thin Tomorrow, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
 :root{
-  --bg:#000; --surface:#0a0a0a; --soft:#111; --ink:#fff; --mute:rgba(255,255,255,.62); --line:rgba(255,255,255,.18);
-  --gold:#bdbdbd; --dark:#0d0d0d; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.62); --stone:#8a8a8a; --btn:#fff; --on-btn:#000;
-  --font:Tomorrow,"Chakra Petch",system-ui,sans-serif; color-scheme:dark;
+  --bg:#fff; --surface:#f7f7f6; --soft:#f2f2f0; --ink:#000; --mute:rgba(0,0,0,.62); --line:rgba(0,0,0,.16);
+  --gold:#bdbdbd; --dark:#000; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.62); --stone:#8a8a8a; --btn:#000; --on-btn:#fff;
+  --font:Tomorrow,"Chakra Petch",system-ui,sans-serif; color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,7 +26,7 @@ p{margin:0}
 .muted{color:var(--mute)}
 .small{font-size:13px;color:var(--mute);letter-spacing:.06em}
 .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:400;margin-bottom:20px}
-.site{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.96);backdrop-filter:blur(8px)}
+.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px)}
 .topbar{padding-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .topbar a{display:inline-flex;align-items:center;gap:8px;padding:10px 0;text-decoration:none;color:var(--ink)}.topbar a:hover{text-decoration:underline;text-underline-offset:5px}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px 22px;flex-wrap:wrap}
@@ -50,7 +50,7 @@ figcaption{margin-top:12px;font-size:13px;letter-spacing:.06em;color:var(--mute)
 .shot figcaption{padding:12px 14px;margin:0;border-top:1px solid var(--line)}
 .problem{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .stats{background:var(--dark);border:1px solid var(--line);color:var(--on-dark);padding:36px;display:grid;gap:26px}
-.stats b{display:block;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:200;letter-spacing:-.02em;line-height:1;color:var(--ink)}
+.stats b{display:block;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:200;letter-spacing:-.02em;line-height:1;color:var(--on-dark)}
 .stats span{font-size:14px;color:var(--on-dark-mute)}
 .stats small{font-size:12px;color:var(--on-dark-mute)}
 .scraps{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
@@ -61,7 +61,7 @@ figcaption{margin-top:12px;font-size:13px;letter-spacing:.06em;color:var(--mute)
 .fstep i{font-style:normal;font-size:12px;letter-spacing:.14em;color:var(--mute)}
 .fstep h3{font-size:19px;margin:8px 0 6px}
 .fstep p{font-size:14px;color:var(--mute)}
-.fstep.end{background:var(--ink)}.fstep.end h3,.fstep.end i{color:var(--on-btn)}.fstep.end p{color:rgba(0,0,0,.65)}
+.fstep.end{background:var(--ink)}.fstep.end h3,.fstep.end i{color:var(--on-btn)}.fstep.end p{color:rgba(255,255,255,.7)}
 .walk{display:grid;gap:96px;margin-top:80px}
 .wrow{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
 .wrow.flip{grid-template-columns:1.2fr .8fr}.wrow.flip .wtext{order:2}
@@ -106,7 +106,7 @@ tr.us td{background:var(--ink);color:var(--on-btn);font-weight:400}
 .plan .p small{font-size:14px;font-weight:300;color:var(--mute);letter-spacing:0}
 .plan .u{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .plan p{font-size:14px;color:var(--mute)}
-.plan.pick{background:var(--ink);color:var(--on-btn)}.plan.pick p,.plan.pick .u,.plan.pick .p small{color:rgba(0,0,0,.62)}
+.plan.pick{background:var(--ink);color:var(--on-btn)}.plan.pick p,.plan.pick .u,.plan.pick .p small{color:rgba(255,255,255,.7)}
 .badge{align-self:flex-start;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:2px 10px;border:1px solid var(--on-btn);color:var(--on-btn)}
 .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
 .notes div{border-top:1px solid var(--ink);padding-top:14px;font-size:14px;color:var(--mute)}
@@ -119,12 +119,12 @@ tr.us td{background:var(--ink);color:var(--on-btn);font-weight:400}
 .data{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px;border:1px solid var(--line)}
 .data .card:last-child{border-right:0}.data .card{border-bottom:0}
 .about{background:var(--dark);border:1px solid var(--line);color:var(--on-dark);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:48px}
-.about h2{color:var(--ink);margin-bottom:24px}
+.about h2{color:var(--on-dark);margin-bottom:24px}
 .about p{color:var(--on-dark);font-size:17px;margin-bottom:16px;max-width:60ch}
 .about p.m{color:var(--on-dark-mute);font-size:15px}
 .facts{display:grid;gap:22px;align-content:start}
 .facts div{border-top:1px solid var(--line);padding-top:14px}
-.facts b{display:block;font-size:2.2rem;font-weight:200;color:var(--ink);letter-spacing:-.01em;line-height:1.1}
+.facts b{display:block;font-size:2.2rem;font-weight:200;color:var(--on-dark);letter-spacing:-.01em;line-height:1.1}
 .facts span{font-size:14px;color:var(--on-dark-mute)}
 details{border-top:1px solid var(--line);padding:20px 0}
 details:last-child{border-bottom:1px solid var(--line)}
