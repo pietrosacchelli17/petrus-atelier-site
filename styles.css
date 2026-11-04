@@ -326,3 +326,10 @@ body.menu-open{overflow:hidden}
 /* Easy scrolling: no snapping, the page just flows */
 html{scroll-snap-type:none;scroll-behavior:smooth}
 .panel{scroll-snap-align:none}
+
+/* Multidisciplinary practice: always a horizontal row of three */
+.pillars.three{grid-template-columns:repeat(3,1fr);border:0;border-top:1px solid var(--line)}
+.pillars.three > div{padding:28px clamp(10px,2.4vw,32px) 8px 0;border-right:0;border-bottom:0}
+.pillars.three > div + div{padding-left:clamp(10px,2.4vw,32px);border-left:1px solid var(--line)}
+.pillars.three h3{font-size:clamp(.95rem,3.4vw,1.5rem);margin-bottom:14px}
+.pillars.three p{font-size:clamp(.78rem,2.6vw,.95rem)}
