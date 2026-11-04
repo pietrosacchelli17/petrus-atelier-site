@@ -308,3 +308,11 @@ body.menu-open{overflow:hidden}
 .stage-count{font-size:12px;letter-spacing:.1em;color:var(--mute);font-variant-numeric:tabular-nums}
 @media (max-width:700px){.stage{padding-top:64px}.stage-info{grid-template-columns:1fr;gap:14px}.stage-right{flex-direction:row;justify-content:space-between;align-items:baseline;width:100%}}
 @media (prefers-reduced-motion:reduce){.stage-imgs img,.stage-text{transition:none}}
+
+/* Photo stage: a white page for the photographs; the rest of the site stays black. No border on the photo. */
+.stage{background:#fff;color:#000}
+.stage-imgs img{padding:0;background:none}
+.stage-meta,.stage-count{color:rgba(0,0,0,.6)}
+.stage-link{border-bottom-color:rgba(0,0,0,.6)}
+.stage-link:hover{border-color:#000}
+:focus-visible.stage-link,.stage :focus-visible{outline-color:#000}
