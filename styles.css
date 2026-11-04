@@ -317,3 +317,8 @@ body.menu-open{overflow:hidden}
 .stage-link:hover{border-color:#000}
 :focus-visible.stage-link,.stage :focus-visible{outline-color:#000}
 .stage-imgs{margin-top:18px}
+
+/* Smaller menu and stage type */
+.menu a{font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.5}
+.stage-title{font-size:clamp(1.3rem,2.3vw,2rem)}
+.logo{font-size:12px}
