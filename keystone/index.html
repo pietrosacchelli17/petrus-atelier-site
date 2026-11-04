@@ -7,19 +7,19 @@
 <style>
 /* Keystone: white with black text, thin Tomorrow, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
 :root{
-  --bg:#fff; --surface:#f7f7f6; --soft:#f2f2f0; --ink:#000; --mute:rgba(0,0,0,.62); --line:rgba(0,0,0,.16);
+  --bg:#fff; --surface:#f7f7f6; --soft:#f2f2f0; --ink:#000; --mute:rgba(0,0,0,.74); --line:rgba(0,0,0,.16);
   --gold:#bdbdbd; --dark:#000; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.62); --stone:#8a8a8a; --btn:#000; --on-btn:#fff;
   --font:Tomorrow,"Chakra Petch",system-ui,sans-serif; color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:300;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:0;padding-block:0;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;font-size:17px;letter-spacing:.03em;line-height:1.6;padding-inline:0;padding-block:0;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1280px;margin:0 auto;padding-inline:var(--gut)}
 a{color:inherit}
-h1,h2,h3{font-weight:200;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1,h2,h3{font-weight:300;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h1{font-size:clamp(2.6rem,6.6vw,5.6rem);line-height:1.02}
 h2{font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.06}
-h3{font-size:22px;line-height:1.2;font-weight:300;letter-spacing:0}
+h3{font-size:22px;line-height:1.2;font-weight:400;letter-spacing:0}
 b{font-weight:400}
 p{margin:0}
 .lede{font-size:clamp(17px,2vw,20px);color:var(--mute);max-width:60ch;text-wrap:pretty}
@@ -66,7 +66,7 @@ figcaption{margin-top:12px;font-size:13px;letter-spacing:.06em;color:var(--mute)
 .wrow{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
 .wrow.flip{grid-template-columns:1.2fr .8fr}.wrow.flip .wtext{order:2}
 .wtext .num{font-size:14px;letter-spacing:.2em;color:var(--mute);font-weight:400}
-.wtext h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:12px 0 16px;font-weight:200;letter-spacing:-.01em}
+.wtext h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:12px 0 16px;font-weight:300;letter-spacing:-.01em}
 .wtext p{color:var(--mute)}
 .wtext ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
 .wtext li,.card li{padding-left:18px;position:relative}
@@ -102,7 +102,7 @@ tr.us td{background:var(--ink);color:var(--on-btn);font-weight:400}
 .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border:1px solid var(--line)}
 .plan{border-right:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .plan:last-child{border-right:0}
-.plan .p{font-size:2.6rem;font-weight:200;letter-spacing:-.02em;line-height:1}
+.plan .p{font-size:2.6rem;font-weight:300;letter-spacing:-.02em;line-height:1}
 .plan .p small{font-size:14px;font-weight:300;color:var(--mute);letter-spacing:0}
 .plan .u{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .plan p{font-size:14px;color:var(--mute)}
@@ -113,7 +113,7 @@ tr.us td{background:var(--ink);color:var(--on-btn);font-weight:400}
 .notes b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
 .steps{display:grid;gap:0;margin-top:36px;counter-reset:s}
 .steps div{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
-.steps div::before{counter-increment:s;content:counter(s);font-size:2.4rem;font-weight:200;color:var(--ink);line-height:1}
+.steps div::before{counter-increment:s;content:counter(s);font-size:2.4rem;font-weight:300;color:var(--ink);line-height:1}
 .steps b{display:block;font-size:18px;margin-bottom:4px}
 .steps p{color:var(--mute)}
 .data{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px;border:1px solid var(--line)}
@@ -130,7 +130,7 @@ details{border-top:1px solid var(--line);padding:20px 0}
 details:last-child{border-bottom:1px solid var(--line)}
 summary{cursor:pointer;font-weight:300;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--mute);font-weight:200;font-size:24px;line-height:1}
+summary::after{content:"+";color:var(--mute);font-weight:300;font-size:24px;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin-top:10px;color:var(--mute);max-width:70ch}
 .faq{margin-top:32px}

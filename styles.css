@@ -342,3 +342,12 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 .panel.light .shot{border-color:rgba(0,0,0,.16)}
 .panel.light :focus-visible{outline-color:#000}
 .panel.light + .panel{border-top:0}
+
+/* Heavier type on white */
+.panel.light h2{font-weight:300}
+.panel.light p.text{font-weight:400;color:rgba(0,0,0,.75)}
+.panel.light .eyebrow{font-weight:400;color:rgba(0,0,0,.7)}
+.panel.light .btn{font-weight:400}
+.stage-title{font-weight:300}
+.stage-meta,.stage-count{color:rgba(0,0,0,.72);font-weight:400}
+.stage-link{font-weight:400}
