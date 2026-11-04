@@ -309,15 +309,6 @@ body.menu-open{overflow:hidden}
 @media (max-width:700px){.stage{padding-top:64px}.stage-info{grid-template-columns:1fr;gap:14px}.stage-right{flex-direction:row;justify-content:space-between;align-items:baseline;width:100%}}
 @media (prefers-reduced-motion:reduce){.stage-imgs img,.stage-text{transition:none}}
 
-/* Photo stage: a white page for the photographs; the rest of the site stays black. No border on the photo. */
-.stage{background:#fff;color:#000}
-.stage-imgs img{padding:0;background:none}
-.stage-meta,.stage-count{color:rgba(0,0,0,.6)}
-.stage-link{border-bottom-color:rgba(0,0,0,.6)}
-.stage-link:hover{border-color:#000}
-:focus-visible.stage-link,.stage :focus-visible{outline-color:#000}
-.stage-imgs{margin-top:18px}
-
 /* Smaller menu and stage type */
 .menu a{font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.5}
 .stage-title{font-size:clamp(1.3rem,2.3vw,2rem)}
@@ -333,21 +324,4 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 .pillars.three > div + div{padding-left:clamp(10px,2.4vw,32px);border-left:1px solid var(--line)}
 .pillars.three h3{font-size:clamp(.95rem,3.4vw,1.5rem);margin-bottom:14px}
 .pillars.three p{font-size:clamp(.78rem,2.6vw,.95rem)}
-
-/* Keystone on the home page: white with black text */
-.panel.light{background:#fff;color:#000;border-top:0}
-.panel.light .eyebrow,.panel.light p.text{color:rgba(0,0,0,.65)}
-.panel.light .btn{border-color:#000;color:#000;background:transparent}
-.panel.light .btn:hover{background:#000;color:#fff}
-.panel.light .shot{border-color:rgba(0,0,0,.16)}
-.panel.light :focus-visible{outline-color:#000}
-.panel.light + .panel{border-top:0}
-
-/* Heavier type on white */
-.panel.light h2{font-weight:300}
-.panel.light p.text{font-weight:400;color:rgba(0,0,0,.75)}
-.panel.light .eyebrow{font-weight:400;color:rgba(0,0,0,.7)}
-.panel.light .btn{font-weight:400}
-.stage-title{font-weight:300}
-.stage-meta,.stage-count{color:rgba(0,0,0,.72);font-weight:400}
-.stage-link{font-weight:400}
+.stage-imgs img{padding:0;background:none}
