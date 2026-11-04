@@ -316,3 +316,4 @@ body.menu-open{overflow:hidden}
 .stage-link{border-bottom-color:rgba(0,0,0,.6)}
 .stage-link:hover{border-color:#000}
 :focus-visible.stage-link,.stage :focus-visible{outline-color:#000}
+.stage-imgs{margin-top:18px}
