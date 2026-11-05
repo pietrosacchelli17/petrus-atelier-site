@@ -85,7 +85,7 @@ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
     text.classList.add('swap');
     setTimeout(() => {
       const im = imgs[k];
-      meta.textContent = im.dataset.meta; title.textContent = im.dataset.title; link.href = im.dataset.href;
+      meta.textContent = im.dataset.place; title.textContent = im.dataset.name; link.href = im.dataset.go;
       count.textContent = `${pad(k + 1)} / ${pad(imgs.length)}`;
       text.classList.remove('swap');
     }, 350);
