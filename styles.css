@@ -355,4 +355,4 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 .hero-name{display:inline-block!important;margin:6px 14px 0 0!important;vertical-align:baseline}
 .atelier{display:inline-block!important;margin:0 0 0 0!important;vertical-align:baseline}
 .atelier + .text{margin-top:28px}
-.atelier{font-family:'Tomorrow','Chakra Petch',system-ui,sans-serif!important;font-weight:200!important;letter-spacing:0!important;color:var(--fg)}
+.atelier{font-family:var(--font)!important;font-weight:400!important;letter-spacing:0!important;color:var(--fg)}
