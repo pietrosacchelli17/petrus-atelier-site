@@ -341,8 +341,8 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 .bigname,.atelier{font-family:var(--font);letter-spacing:0}
 .stage-title{max-width:none!important}
 
-/* PETRUS: smaller, with ETRU smaller still and dim */
+/* PETRUS: smaller, all letters the same size, ETRU dim */
 .bigname,h2.bigname,h1.bigname{font-size:clamp(2.2rem,5.4vw,3.8rem)!important;margin:6px 0 20px}
-.bigname .dim{font-size:.55em;letter-spacing:.02em}
+.bigname .dim{font-size:1em}
 .atelier{font-size:clamp(.7rem,1.1vw,.9rem)!important;margin-bottom:24px}
 @media (max-width:700px){.bigname,h2.bigname,h1.bigname{font-size:clamp(2.2rem,11vw,3rem)!important}}
