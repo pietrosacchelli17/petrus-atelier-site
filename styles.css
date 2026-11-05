@@ -379,3 +379,7 @@ html,body{overflow-x:clip;overscroll-behavior-x:none}
   body #menu a{font-size:15px!important;line-height:1.3!important}
   #menu li{margin:0 0 20px}
 }
+
+/* Menu links 15px with more space between lines, on desktop too */
+body #menu a{font-size:15px!important;line-height:1.3!important}
+#menu li{margin:0 0 20px}
