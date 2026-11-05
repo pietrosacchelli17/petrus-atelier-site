@@ -3,13 +3,13 @@
 <title>Keystone — Quotes, projects and finance for stone and joinery</title>
 <link rel="icon" href="images/keystone-mark-sage.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@200;300;400&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
-/* Keystone: black, thin Tomorrow, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
+/* Keystone: black, Hanken Grotesk, square corners, white and grey only. Same look as PS Gallery and the Petrus Atelier hub. */
 :root{
   --bg:#000; --surface:#0a0a0a; --soft:#111; --ink:#fff; --mute:rgba(255,255,255,.62); --line:rgba(255,255,255,.18);
   --gold:#bdbdbd; --dark:#0d0d0d; --on-dark:#fff; --on-dark-mute:rgba(255,255,255,.62); --stone:#8a8a8a; --btn:#fff; --on-btn:#000;
-  --font:Tomorrow,"Chakra Petch",system-ui,sans-serif; color-scheme:dark;
+  --font:"Hanken Grotesk",Inter,system-ui,sans-serif; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -214,6 +214,11 @@ h3{font-size:18px}
 .sheet small{font-size:6.5px}
 .sh-title{font-size:1rem}
 @media (max-width:560px){.sheet-wrap{max-width:240px}.sheet{font-size:7.5px}}
+
+/* Plain, unspaced type like reefturner.studio and sub.global */
+body{letter-spacing:0;font-weight:400}
+h1,h2,h3{font-weight:300}
+.eyebrow,.btn,.links,.topbar,.logo,.small,.badge,.tag{text-transform:none!important;letter-spacing:0!important}
 </style>
 
 <div class="notice">Demo site. Example figures only.</div>

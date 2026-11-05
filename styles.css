@@ -333,3 +333,10 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 .dot{display:none!important}
 html.has-dot,html.has-dot *{cursor:auto!important}
 a,button,summary,[role=button],.stage-imgs img{cursor:pointer!important}
+
+/* Type: Hanken Grotesk, one size for everything (like reefturner.studio), plain and unspaced */
+:root{--font:'Hanken Grotesk','Inter',system-ui,sans-serif}
+body{font-family:var(--font)}
+body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-family:var(--font);font-size:14.5px!important;line-height:1.65!important;letter-spacing:0!important;text-transform:none!important;font-weight:400!important}
+.bigname,.atelier{font-family:var(--font);letter-spacing:0}
+.stage-title{max-width:none!important}
