@@ -347,3 +347,6 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 
 /* A bit smaller, and no all-caps anywhere */
 .atelier{text-transform:none!important;letter-spacing:.02em!important}
+
+/* Atelier line a bit bigger */
+.atelier{font-size:22px!important;line-height:1.2}
