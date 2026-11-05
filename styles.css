@@ -337,14 +337,13 @@ a,button,summary,[role=button],.stage-imgs img{cursor:pointer!important}
 /* Type: Hanken Grotesk, one size for everything (like reefturner.studio), plain and unspaced */
 :root{--font:'Hanken Grotesk','Inter',system-ui,sans-serif}
 body{font-family:var(--font)}
-body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-family:var(--font);font-size:13px!important;line-height:1.65!important;letter-spacing:0!important;text-transform:none!important;font-weight:400!important}
+body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-family:var(--font);font-size:14.5px!important;line-height:1.65!important;letter-spacing:0!important;text-transform:none!important;font-weight:400!important}
 .bigname,.atelier{font-family:var(--font);letter-spacing:0}
 .stage-title{max-width:none!important}
 
-/* PETRUS as before: large, thin Tomorrow letters, ETRU dim */
-.bigname,h2.bigname,h1.bigname{font-family:'Tomorrow','Chakra Petch',system-ui,sans-serif;font-weight:200!important;font-size:clamp(2.4rem,7vw,5.2rem)}
+/* Petrus: mixed case, 40px, thin Tomorrow letters, "etru" dim */
+.bigname,h2.bigname,h1.bigname{font-family:'Tomorrow','Chakra Petch',system-ui,sans-serif;font-weight:200!important;font-size:40px!important;line-height:1.05;letter-spacing:0}
 .bigname .dim{font-size:1em}
-@media (max-width:700px){.bigname,h2.bigname,h1.bigname{font-size:clamp(2.4rem,13vw,3.6rem)}}
 
 /* A bit smaller, and no all-caps anywhere */
 .atelier{text-transform:none!important;letter-spacing:.02em!important}
