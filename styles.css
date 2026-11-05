@@ -367,3 +367,9 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 /* Straight vertical scrolling: nothing may push the page sideways */
 html,body{overflow-x:clip;overscroll-behavior-x:none}
 .stage{overflow:hidden}
+
+/* Smaller three-line menu button */
+.menu-btn{width:36px;height:36px;gap:5px}
+.menu-btn span{width:18px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
