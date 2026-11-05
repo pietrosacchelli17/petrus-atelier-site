@@ -341,8 +341,7 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 .bigname,.atelier{font-family:var(--font);letter-spacing:0}
 .stage-title{max-width:none!important}
 
-/* PETRUS: smaller, all letters the same size, ETRU dim */
-.bigname,h2.bigname,h1.bigname{font-size:clamp(2.2rem,5.4vw,3.8rem)!important;margin:6px 0 20px}
+/* PETRUS as before: large, thin Tomorrow letters, ETRU dim */
+.bigname,h2.bigname,h1.bigname{font-family:'Tomorrow','Chakra Petch',system-ui,sans-serif;font-weight:200!important;font-size:clamp(2.4rem,7vw,5.2rem)}
 .bigname .dim{font-size:1em}
-.atelier{font-size:clamp(.7rem,1.1vw,.9rem)!important;margin-bottom:24px}
-@media (max-width:700px){.bigname,h2.bigname,h1.bigname{font-size:clamp(2.2rem,11vw,3rem)!important}}
+@media (max-width:700px){.bigname,h2.bigname,h1.bigname{font-size:clamp(2.4rem,13vw,3.6rem)}}
