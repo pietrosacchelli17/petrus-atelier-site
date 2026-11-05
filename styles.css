@@ -325,3 +325,6 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 .pillars.three h3{font-size:clamp(.95rem,3.4vw,1.5rem);margin-bottom:14px}
 .pillars.three p{font-size:clamp(.78rem,2.6vw,.95rem)}
 .stage-imgs img{padding:0;background:none}
+
+/* Cursor dot: always visible, on dark and light photographs */
+.dot{mix-blend-mode:normal;background:#fff;box-shadow:0 0 0 1.5px rgba(0,0,0,.75)}

@@ -95,7 +95,6 @@ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   const go = d => { stop(); show(cur + d); start(); };
   imgs[0].classList.add('on');
   imgs.forEach(im => im.addEventListener('click', () => go(1)));
-  st.addEventListener('mouseenter', stop); st.addEventListener('mouseleave', start);
   addEventListener('keydown', e => {
     if (document.body.classList.contains('menu-open')) return;
     if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1);
