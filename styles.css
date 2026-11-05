@@ -328,3 +328,8 @@ html{scroll-snap-type:none;scroll-behavior:smooth}
 
 /* Cursor dot: always visible, on dark and light photographs */
 .dot{mix-blend-mode:normal;background:#fff;box-shadow:0 0 0 1.5px rgba(0,0,0,.75)}
+
+/* Normal cursor everywhere */
+.dot{display:none!important}
+html.has-dot,html.has-dot *{cursor:auto!important}
+a,button,summary,[role=button],.stage-imgs img{cursor:pointer!important}

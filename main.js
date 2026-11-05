@@ -32,23 +32,6 @@ if (cap && count && panels.length) {
   count.textContent = `(1/${panels.length})`;
 }
 
-// Dot cursor (mouse devices only)
-if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-  const dot = document.createElement('div');
-  dot.className = 'dot';
-  dot.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(dot);
-  document.documentElement.classList.add('has-dot');
-  let x = 0, y = 0, raf = 0;
-  const draw = () => { dot.style.transform = `translate(${x}px, ${y}px)`; raf = 0; };
-  addEventListener('mousemove', e => {
-    x = e.clientX; y = e.clientY; dot.classList.add('on');
-    if (!raf) raf = requestAnimationFrame(draw);
-    dot.classList.toggle('big', !!e.target.closest('a, button, summary, input, textarea, select, label'));
-  }, { passive: true });
-  document.addEventListener('mouseleave', () => dot.classList.remove('on'));
-}
-
 // Menu: three lines open a full black page.
 (() => {
   const btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
