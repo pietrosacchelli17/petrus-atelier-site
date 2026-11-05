@@ -356,3 +356,10 @@ body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-fami
 .atelier{display:inline-block!important;margin:0 0 0 0!important;vertical-align:baseline}
 .atelier + .text{margin-top:28px}
 .atelier{font-family:var(--font)!important;font-weight:400!important;letter-spacing:0!important;color:var(--fg)}
+
+/* Phones: text a notch smaller */
+@media (max-width:700px){
+  body *:not(.bigname):not(.bigname *):not(.atelier):not(svg):not(svg *){font-size:12.5px!important}
+  .atelier{font-size:18px!important}
+  .bigname,h2.bigname,h1.bigname{font-size:34px!important}
+}
