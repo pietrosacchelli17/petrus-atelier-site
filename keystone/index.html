@@ -220,6 +220,33 @@ body{letter-spacing:0;font-weight:400}
 h1,h2,h3{font-weight:300}
 *:not(.sheet):not(.sheet *){text-transform:none!important}
 .eyebrow,.btn,.links,.topbar,.logo,.small,.badge,.tag{letter-spacing:0!important}
+
+/* Same quiet scale as Petrus Atelier and PS Gallery: one body size, small plain headings, underline links */
+:root{--mute:rgba(255,255,255,.66)}
+body{font-size:14.5px;line-height:1.65;font-weight:400}
+h1,h2{font-size:26px!important;line-height:1.25;font-weight:400;letter-spacing:0;max-width:34ch}
+h3,.wtext h3,.fstep h3,summary{font-size:16px!important;line-height:1.35;font-weight:400!important;letter-spacing:0}
+.lede,.about p,.band p{font-size:14.5px!important;line-height:1.65}
+.eyebrow,.small,.fstep i,.links,.topbar,.logo,.tag,.notice,.badge,figcaption,.plan .u,.plan .p small{font-size:14.5px!important;letter-spacing:0!important;text-transform:none!important}
+.eyebrow{margin-bottom:14px}
+.notice{font-size:13px!important;padding:8px 16px}
+.logo{gap:8px}.logo img{width:18px}
+.stats b,.facts b,.plan .p,.steps div::before,.sh-title{font-size:26px!important;font-weight:400!important;letter-spacing:0!important}
+.steps div{grid-template-columns:48px 1fr}
+.hero{padding-block:clamp(56px,9vw,120px) 96px}
+.hero h1{margin-bottom:22px}
+section{padding-block:80px}
+.btn,.btn.sm,.btn.ghost{background:transparent!important;color:var(--ink)!important;border:0!important;border-bottom:1px solid rgba(255,255,255,.6)!important;padding:0 0 5px!important;font-size:14.5px!important;letter-spacing:0!important;text-transform:none!important;gap:8px}
+.btn::after{content:"→"}
+.btn:hover{border-bottom-color:#fff!important;color:var(--mute)!important}
+.hero .actions{gap:28px;margin-top:30px}
+tr.us td,.plan.pick,.fstep.end,.bub.me{background:transparent!important;color:var(--ink)!important;border-color:var(--ink)!important}
+.fstep.end h3,.fstep.end i,.plan.pick p,.plan.pick .u,.plan.pick .p small{color:var(--mute)!important}
+.fstep.end{outline:1px solid var(--ink);outline-offset:-1px}
+summary::after{font-size:18px!important;font-weight:400!important}
+@media (max-width:700px){body{font-size:12.5px}.lede,.about p,.band p,.eyebrow,.small,.fstep i,.links,.topbar,.logo,.tag,.badge,figcaption,.plan .u,.plan .p small,.btn{font-size:12.5px!important}h1,h2,.stats b,.facts b,.plan .p,.steps div::before,.sh-title{font-size:22px!important}h3,.wtext h3,.fstep h3,summary{font-size:15px!important}}
+.card p,.card li,.wtext ul,.wtext li,.row,.fitlist div,.bub,th,td,.chrome,.notes div,.notes b,.plan p,.steps div p,details p,.about p.m,.band p,.stats span,.stats small{font-size:14.5px!important}
+@media (max-width:700px){.card p,.card li,.wtext ul,.wtext li,.row,.fitlist div,.bub,th,td,.chrome,.notes div,.notes b,.plan p,.steps div p,details p,.about p.m,.band p,.stats span,.stats small{font-size:12.5px!important}}
 </style>
 
 <div class="notice">Demo site. Example figures only.</div>
@@ -378,7 +405,7 @@ h1,h2,h3{font-weight:300}
     </div>
   </div>
 
-  <h3 style="margin-top:64px;font-size:clamp(24px,3vw,30px);letter-spacing:-.035em">How it compares with what you use now</h3>
+  <h3 style="margin-top:64px">How it compares with what you use now</h3>
   <div class="tablewrap"><table>
     <thead><tr><th>Option</th><th>Examples</th><th>What it lacks for a stone firm</th></tr></thead>
     <tbody>
@@ -400,7 +427,7 @@ h1,h2,h3{font-weight:300}
     <div class="plan"><h3>Starter</h3><div class="p">£149<small> /month</small></div><div class="u">Up to 5 users</div><p>CRM, pipeline, tasks, documents and basic projects.</p></div>
     <div class="plan pick"><span class="badge">Suggested</span><h3>Growth</h3><div class="p">£299<small> /month</small></div><div class="u">Up to 10 users</div><p>Everything in Starter, plus quotes, inventory, timeline, reports and invoices.</p></div>
     <div class="plan"><h3>Business</h3><div class="p">£499<small> /month</small></div><div class="u">Up to 20 users</div><p>More than one site, automations and priority support.</p></div>
-    <div class="plan"><h3>Enterprise</h3><div class="p" style="font-size:30px">By quote</div><div class="u">More users</div><p>Integrations, high volumes and a service-level agreement.</p></div>
+    <div class="plan"><h3>Enterprise</h3><div class="p">By quote</div><div class="u">More users</div><p>Integrations, high volumes and a service-level agreement.</p></div>
   </div>
   <div class="notes">
     <div><b>Setting up</b>£300 to £500 on Starter, £500 to £1,000 on Growth, from £1,000 on Business.</div>
